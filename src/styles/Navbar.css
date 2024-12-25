@@ -1,0 +1,145 @@
+/* Basic styles for the navbar (unchanged from your provided code) */
+.navbar {
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: space-between;
+    background-color: rgb(4, 1, 36); /* Dark background for contrast */
+   /* background-color: transparent;  Dark background for contrast */
+    padding: 8px 10px; /* Reduced padding to shift content towards the center */
+    position: fixed; /* Sticky navbar */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);  Subtle shadow for depth */
+}
+
+.navbar-logo img {
+    height: 50px;
+    width: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Pointer cursor for the logo */
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 15px;
+}
+
+.navbar-menu li {
+    margin: 0 15px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Link styles */
+.navbar-menu li a {
+    text-decoration: none;
+    color: rgb(252, 252, 252); /* Light text color for contrast */
+    font-size: 18px;
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s, text-shadow 0.3s ease;
+}
+
+/* Hover effects */
+.navbar-menu li:hover {
+    transform: scale(1.2); /* Slight enlargement on hover */
+}
+
+.navbar-menu li:hover a {
+    color: #00ffff; /* Neon blue */
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+    animation: neon-glow 1.5s infinite alternate;
+}
+
+.navbar-menu li:not(:hover) {
+    opacity: 0.9; /* Dim non-hovered links */
+}
+
+/* Neon glow animation */
+@keyframes neon-glow {
+    0% {
+        text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
+    }
+    50% {
+        text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+    }
+    100% {
+        text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
+    }
+}
+
+/* Subtle glow for all links */
+.navbar-menu li a {
+    text-shadow: 0 0 2px #fcf9f9;
+}
+
+/* Media query for tablet size screens */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-menu li {
+        margin: 10px 0;
+    }
+}
+
+/* Media query for phone size screens */
+@media (max-width: 480px) {
+    /* Hide the menu initially */
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust based on your navbar height */
+        left: 0;
+        background-color: #020808;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow for the menu */
+        padding: 10px 0;
+    }
+
+    .navbar-menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    /* Add a menu icon (hamburger) on the right */
+    .navbar-menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* When the menu icon is clicked, show the navbar items */
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    /* Style for the hamburger menu icon */
+    .navbar-menu-icon div {
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        margin: 6px 0;
+    }
+}
+
+/* This style is for the hamburger menu icon */
+.navbar-menu-icon {
+    display: none; /* Initially hidden on larger screens */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 30px;
+}
+
+/* Show the hamburger menu on smaller screens (phones) */
+@media (max-width: 480px) {
+    .navbar-menu-icon {
+        display: flex;
+        margin-left: 10px; /* You can adjust this value to shift the icon more to the left */
+    }
+}
