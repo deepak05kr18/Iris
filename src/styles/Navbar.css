@@ -4,13 +4,20 @@
     align-items: center; /* Centers content vertically */
     justify-content: space-between;
     background-color: rgb(4, 1, 36); /* Dark background for contrast */
-   /* background-color: transparent;  Dark background for contrast */
     padding: 8px 10px; /* Reduced padding to shift content towards the center */
     position: fixed; /* Sticky navbar */
     top: 0;
     width: 100%;
+    height: 100px;
     z-index: 1000;
-    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);  Subtle shadow for depth */
+    font-family: 'Arial', sans-serif; /* You can replace this with a custom font family */
+}
+
+/* Logo and text styling */
+.navbar-logo {
+    display: flex;
+    flex-direction: column; /* Arrange logo and text vertically */
+    align-items: center; /* Center both vertically */
 }
 
 .navbar-logo img {
@@ -19,6 +26,16 @@
     cursor: pointer; /* Pointer cursor for the logo */
 }
 
+.logo-text {
+    color: white;
+    font-size: 10px; /* Adjusted font size */
+    font-weight: bold;
+    margin-top: 5px; /* Space between logo and text */
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Navbar Menu */
 .navbar-menu {
     list-style: none;
     display: flex;
@@ -26,18 +43,20 @@
     padding: 15px;
 }
 
+/* Navbar Menu Items */
 .navbar-menu li {
-    margin: 0 15px;
+    margin: 0 20px; /* Increased margin to give more space between items */
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 /* Link styles */
 .navbar-menu li a {
     text-decoration: none;
-    color: rgb(252, 252, 252); /* Light text color for contrast */
-    font-size: 18px;
+    color: white; /* Light text color for contrast */
+    font-size: 22px; /* Increased font size */
     font-weight: bold; /* Bold text */
-    transition: color 0.3s, text-shadow 0.3s ease;
+    transition: color 0.3s, text-shadow 0.1s ease;
+    font-family: 'Arial', sans-serif; /* You can replace this with a custom font family */
 }
 
 /* Hover effects */
@@ -51,6 +70,7 @@
     animation: neon-glow 1.5s infinite alternate;
 }
 
+/* Dim non-hovered links */
 .navbar-menu li:not(:hover) {
     opacity: 0.9; /* Dim non-hovered links */
 }
@@ -83,7 +103,7 @@
     }
 
     .navbar-menu li {
-        margin: 10px 0;
+        margin: 15px 0; /* Increased margin for better spacing */
     }
 }
 

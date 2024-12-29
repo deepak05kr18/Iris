@@ -1,0 +1,56 @@
+/* Why Choose Us Section Styling */
+.why-choose-us {
+  padding: 50px 30px;
+  text-align: center;
+  background-image: url("../../../components/Images/Background/whybg.jpg"); /* Add your background image here */
+  background-size: cover; /* Make the image cover the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  color: #000000; /* Optional: Change text color for better visibility */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Section Heading Styling */
+.section-heading {
+  font-size: 3.5rem; /* Increased font size */
+  font-weight: bold;
+  margin-bottom: 30px; /* Adjusted spacing */
+  color: #000000; /* White color for better contrast */
+  text-align: center; /* Center-aligned heading */
+  text-transform: uppercase;
+}
+
+/* Reason Container Styling */
+.reasons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px; /* Increased spacing between items */
+}
+
+/* Individual Reason Item Styling */
+.reason-item {
+  max-width: 450px; /* Increased max-width */
+  flex: 1 1 calc(50% - 40px); /* Two items per row with adjusted gap */
+  text-align: center; /* Center-align content */
+  color: #fff; /* Ensures text inside items is white */
+}
+
+/* Reason Icon Styling */
+.reason-icon {
+  width: 120px; /* Increased size */
+  height: 120px; /* Increased size */
+  margin-bottom: 20px; /* More spacing below the icon */
+}
+
+/* Reason Item Text Styling */
+.reason-item p {
+  font-size: 1.3rem; /* Increased font size */
+  color: #000000; /* White text color for consistency */
+  line-height: 1.8; /* Adjusted line height for better readability */
+  margin: 0 auto; /* Ensures proper alignment */
+  max-width: 400px; /* Limited width for readability */
+}

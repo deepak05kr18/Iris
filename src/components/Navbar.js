@@ -18,6 +18,9 @@ function Navbar() {
                 <Link to="/">
                     <img src={logo} alt="Company Logo" />
                 </Link>
+                <div className="logo-text">
+                    Iris Aerial Innovations
+                </div>
             </div>
 
             {/* Hamburger icon for small screens */}
@@ -32,7 +35,8 @@ function Navbar() {
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about-us">About Us</Link></li>
                 <li><Link to="/services">Services</Link></li>
-                <li><Link to="/contact-us">Contact Us</Link></li>
+                <li><Link to="/contact-us">Technologies</Link></li>
+                <li><Link to="/contact-us">Gallery</Link></li>
                 <li><Link to="/contact-us">Contact Us</Link></li>
             </ul>
         </nav>
