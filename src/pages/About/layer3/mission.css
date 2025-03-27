@@ -1,0 +1,53 @@
+
+
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  
+  .site-container {
+    display: grid;
+    place-items: center;
+  
+    min-height: 100vh;
+    padding: 1.5em;
+  
+    /* Background specifically for this section */
+    background: 
+      url(https://i.ibb.co/Qjt7TJn/milad-fakurian-E8-Ufcyxz514-unsplash-1.jpg)
+      center / cover no-repeat fixed;
+  
+    border-radius: 20px; /* Optional if you want rounded edges for the section */
+  }
+  
+  .carddd {
+    width: 90%;
+    height: auto; /* Adjusts height to content */
+    padding: 35px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center aligns children horizontally */
+    justify-content: flex-start; /* Ensures content starts at the top */
+  
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  
+    backdrop-filter: blur(15px);
+    text-align: center; /* Centers text inside the elements */
+  }
+  
+  .carddd h1 {
+    margin: 0 0 20px; /* Adds space below the heading */
+    font-size: 3rem; /* Adjusts size of the heading */
+  }
+  
+  .carddd p {
+    font-size: 1.6rem; /* Adjusts size of the paragraph text */
+    line-height: 1.6; /* Improves readability */
+  }
+  
+  
+  

@@ -1,13 +1,12 @@
-// src/pages/ContactUsPage.js
-import React from 'react';
+import React from "react";
+import ContactForm from "../Contact_us/contact/contact"; // Adjust the path based on your structure
 
 const ContactUsPage = () => {
-    return (
-        <div>
-            <h2>Contact Us</h2>
-            <p>Get in touch with us for any inquiries or questions.</p>
-        </div>
-    );
+  return (
+    <div>
+      <ContactForm />
+    </div>
+  );
 };
 
 export default ContactUsPage;

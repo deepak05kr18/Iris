@@ -22,16 +22,16 @@
 .section-items {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-  gap: 40px 1px;
+  gap: 40px 10px; /* Increased horizontal gap */
   justify-items: center;
-  margin-top: 20px; /* Add some space at the top */
+  margin-top: 20px;
 }
 
 /* Item style */
 .item {
   position: relative;
-  width: 400px;
-  height: 300px;
+  width: 350px; /* Reduce size */
+  height: 280px; /* Reduce height */
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -53,46 +53,46 @@
 /* Title on top of the image */
 .item .item-title {
   position: absolute;
-  left: 0px;
-  right: 0px;
+  left: 0;
+  right: 0;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.3rem; /* Slightly smaller font */
   font-weight: bold;
-  z-index: 2; /* Ensure title is above image */
-  transition: opacity 0.3s ease; /* Added opacity transition to title */
-  background: rgba(0, 0, 0, 0.808); /* Add a semi-transparent background for better visibility */
-  padding: 10px;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 8px;
 }
 
 /* Info (content) - hidden initially */
 .item-info {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
   text-align: center;
   font-weight: bold;
   color: rgb(0, 0, 0);
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 3; /* Ensure content is above the image */
+  z-index: 3;
 }
 
 /* Content in the item */
 .item-info p {
-  font-size: 1.2rem;
-  margin-top: 10px;
+  font-size: 1rem; /* Reduce text size */
+  margin-top: 8px;
   display: none;
 }
 
 /* Hover effect */
 .item:hover img {
-  opacity: 0.5; /* Reduces opacity of the image */
+  opacity: 0.5;
 }
 
 .item:hover .item-title {
-  opacity: 0.8; /* Make the title a bit more visible on hover */
+  opacity: 0.8;
 }
 
 .item:hover .item-info {
@@ -102,4 +102,67 @@
 
 .item:hover .item-info p {
   display: block;
+}
+
+/* Responsive Design */
+
+/* Tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .section-items {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+
+  .item {
+    width: 300px; /* Reduce card width */
+    height: 250px; /* Reduce height */
+  }
+
+  .item .item-title {
+    font-size: 1.2rem;
+  }
+
+  .item-info p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .section-items {
+    grid-template-columns: repeat(2, 1fr); /* Still 2 cards per row */
+    gap: 20px;
+  }
+
+  .item {
+    width: 270px; /* Smaller width */
+    height: 220px; /* Smaller height */
+  }
+
+  .item .item-title {
+    font-size: 1.1rem;
+  }
+
+  .item-info p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Smaller mobile devices */
+@media (max-width: 480px) {
+  .section-items {
+    grid-template-columns: repeat(2, 1fr); /* 1 card per row */
+  }
+
+  .item {
+    width: 100%; /* Full width */
+    height: 200px;
+  }
+
+  .item .item-title {
+    font-size: 1rem;
+  }
+
+  .item-info p {
+    font-size: 0.8rem;
+  }
 }

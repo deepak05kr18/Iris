@@ -6,42 +6,39 @@
   font-family: 'Lato', sans-serif;
 }
 
-
-
 /* Section styling */
 .cards-section {
   padding: 3rem 2rem;
   text-align: center;
 }
 
-/* Heading and paragraph styles */
-/* Styling for section header */
+/* Section header */
 .cards-header h1 {
-  font-size: 3rem; /* Increased font size for the header */
-  font-family: 'Montserrat', sans-serif; /* Updated font style */
+  font-size: 3rem;
+  font-family: 'Montserrat', sans-serif;
   color: #000000;
   margin-bottom: 1rem;
 }
 
 .cards-header p {
-  font-size: 1.2rem; /* Increased font size for the paragraph */
-  font-family: 'Open Sans', sans-serif; /* Updated font style */
+  font-size: 1.2rem;
+  font-family: 'Open Sans', sans-serif;
   color: #333333;
-  line-height: 1.6; /* Improved readability */
+  line-height: 1.6;
   margin-bottom: 2rem;
 }
 
 /* Cards container */
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-  gap: 50px; /* Space between cards */
+  grid-template-columns: repeat(3, 1fr); /* 2 cards per row */
+  gap: 40px; /* Adjusted gap */
   justify-content: center;
 }
 
 /* Card styles */
 .card {
-  width: 100%; /* Allow cards to adjust within grid */
+  width: 100%;
   height: 360px;
   background: #fff;
   position: relative;
@@ -54,7 +51,7 @@
 }
 
 .card:hover {
-  transform: translateY(-10px); /* Slight upward movement on hover */
+  transform: translateY(-10px);
 }
 
 /* Gradient overlay on hover */
@@ -66,7 +63,7 @@
   width: 100%;
   height: 100%;
   z-index: 2;
-  background: linear-gradient(to bottom, rgba(0, 176, 155, 0.5), rgba(150, 201, 61, 1));
+  background: linear-gradient(to bottom, rgba(3, 3, 112, 0.5), rgba(49, 245, 239, 0.833));
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
@@ -75,7 +72,7 @@
   opacity: 1;
 }
 
-/* Card image styles */
+/* Card image */
 .card img {
   width: 100%;
   height: 100%;
@@ -83,19 +80,22 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1; /* Ensure image is below overlay */
+  z-index: 1;
 }
 
-/* Card content styles */
+/* Card content */
 .card .info {
   position: relative;
-  z-index: 3; /* Ensure content is above overlay */
+  z-index: 3;
   color: #fff;
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.5s ease-in-out;
   padding: 1rem;
   text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Added background for better visibility */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .card:hover .info {
@@ -103,22 +103,22 @@
   transform: translateY(0);
 }
 
-/* Card title and description styles */
+/* Title and description */
 .card .info h1 {
-  font-size: 1.8rem; /* Increased font size for the title */
-  font-family: 'Montserrat', sans-serif; /* Updated font style */
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
   margin-bottom: 10px;
-  color: #000;
+  color: #fff; /* Ensure readability */
 }
 
 .card .info p {
-  font-size: 0.9rem; /* Increased font size for the description */
-  font-family: 'Open Sans', sans-serif; /* Updated font style */
-  margin-bottom: 20px;
-  line-height: 1.5; /* Improved readability */
+  font-size: 0.9rem;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  margin-bottom: 15px;
 }
 
-/* Button styles */
+/* Button */
 .card .btn {
   display: inline-block;
   text-decoration: none;
@@ -133,4 +133,23 @@
 .card .btn:hover {
   box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
   background-color: #eee;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: repeat(1, 1fr); /* 1 card per row for small screens */
+  }
+
+  .card {
+    height: auto;
+  }
+
+  .card .info h1 {
+    font-size: 1.3rem;
+  }
+
+  .card .info p {
+    font-size: 0.8rem;
+  }
 }

@@ -1,0 +1,61 @@
+/* Wrapper for all containers */
+.tech-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: hsl(201, 74%, 79%);
+    
+  }
+  
+  /* Common styling for clay containers */
+  .clay-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 80%;
+    height: fit-content;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: hsl(120deg 20% 95%);
+  box-shadow: 
+    34px 34px 68px 0px hsl(204, 10%, 50%), 
+    inset -8px -8px 16px 0px hsl(120deg 20% 50% / 70%), 
+    inset 0px 14px 28px 0px hsl(120deg 20% 95%);
+  }
+  
+  /* Content styling */
+  .clay-container .content {
+    max-width: 80%;
+  }
+  
+  .clay-container .content h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .clay-container .content p {
+    margin: 0;
+    color: #666;
+    font-size: 1em;
+  }
+  
+  /* Image styling */
+  .clay-container img {
+    width: 150px;
+    height: 90%;
+    border-radius: 10px;
+  }
+  
+  /* Right-aligned image */
+  .img-right {
+    flex-direction: row-reverse;
+  }
+  
+  /* Left-aligned image */
+  .img-left {
+    flex-direction: row;
+  }
+  

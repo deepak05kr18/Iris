@@ -1,7 +1,7 @@
 /* Main Section Styling */
 .main-section {
     position: relative;
-    padding: 200px 200px;
+    padding: 90px 100px;
     text-align: center;
     color: rgb(12, 12, 12);
     background: none; /* Background is handled in the pseudo-element */
@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column; /* Ensures content stacks vertically */
-    min-height: 600px; /* Ensure minimum height for visibility */
+    min-height: 400px; /* Ensure minimum height for visibility */
 }
 
 .main-section::before {
@@ -160,5 +160,49 @@
         top: 25%;
         left: 40%;
         transform: translate(-40%, -25%) rotate(-10deg);
+    }
+}
+/* Responsive Design for Mobile Screens (Max Width: 480px) */
+@media screen and (max-width: 768px) {
+    /* Adjusting the main section padding and layout */
+    .main-section {
+        padding: 50px 20px; /* Reduced padding for smaller screens */
+    }
+
+    .main-section h2 {
+        font-size: 2rem; /* Decreased font size for better readability */
+        margin-bottom: 20px;
+    }
+
+    .main-section p {
+        font-size: 1rem; /* Adjusted font size */
+        line-height: 1.5;
+        max-width: 100%; /* Ensure full width usage */
+    }
+
+    /* Drone Styling Adjustments */
+    .drone {
+        width: 80px; /* Reduce drone size */
+        height: 80px;
+        opacity: 0.5; /* Reduce opacity to prevent distraction */
+    }
+
+    /* Modify drone animations for smaller screens */
+    @keyframes fly1 {
+        0% { top: 5%; left: 10%; transform: rotate(0deg); }
+        50% { top: 40%; left: 50%; transform: rotate(10deg); }
+        100% { top: 10%; left: 80%; transform: rotate(-10deg); }
+    }
+
+    @keyframes fly2 {
+        0% { top: 10%; left: 15%; transform: rotate(0deg); }
+        50% { top: 45%; left: 60%; transform: rotate(-10deg); }
+        100% { top: 15%; left: 50%; transform: rotate(15deg); }
+    }
+
+    @keyframes fly3 {
+        0% { top: 15%; left: 5%; transform: rotate(0deg); }
+        50% { top: 50%; left: 70%; transform: rotate(15deg); }
+        100% { top: 20%; left: 40%; transform: rotate(-10deg); }
     }
 }

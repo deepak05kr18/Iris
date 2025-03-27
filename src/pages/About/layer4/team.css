@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #454545;
+    background: #ffffff;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.section-title {
+    text-align: center;
+    padding: 45px 0 30px 0;
+}
+
+.section-title h1 {
+    font-size: 50px;
+    color: #353535;
+    letter-spacing: 5px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.column {
+    padding: 15px;
+    flex: 1 1 100%;
+}
+
+@media (min-width: 576px) {
+    .column {
+        flex: 1 1 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .column {
+        flex: 1 1 33.333%;
+    }
+}
+
+@media (min-width: 992px) {
+    .column {
+        flex: 1 1 25%;
+    }
+}
+
+.team-9 {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.team-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.team-content h2 {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.team-content h3 {
+    font-size: 18px;
+    color: #777;
+}
+
+.team-overlay {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.team-9:hover .team-overlay {
+    opacity: 1;
+}
+
+.team-social a {
+    margin: 5px;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.team-social a:hover {
+    color: #ff9800;
+}

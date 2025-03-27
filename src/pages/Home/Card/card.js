@@ -2,7 +2,7 @@ import React from 'react';
 import './card.css';
 
 // Importing images
-import img1 from "../../../components/Images/cards/railways.jpg";
+import img1 from "../../../components/Images/cards/Railways2.jpeg";
 import img2 from "../../../components/Images/cards/roads.jpg";
 import img3 from "../../../components/Images/cards/infrastructure.jpg";
 import img4 from "../../../components/Images/cards/irrigation.jpg";
@@ -23,12 +23,10 @@ const Cards = () => {
   return (
     <section className="cards-section">
       <div className="cards-header">
-        <h1>Sectors of Operations</h1>
+        <h1>Industry Verticals</h1>
         <p>̥
           
-We deliver innovative drone-based solutions for railways, mining, roads, urban planning, and <br/>
-water management, ensuring safety, efficiency, and sustainability through precise<br/>
- surveys, advanced models, and comprehensive data-driven insights.
+        We deliver geospatial, Remote Sensing, and UAV-based solutions for a large industry segment.
         </p>
       </div>
       <div className="cards-container">
@@ -38,7 +36,7 @@ water management, ensuring safety, efficiency, and sustainability through precis
             <div className="info">
               <h1>{card.title}</h1>
               <p>{card.description}</p>
-              <a href="#" className="btn">Read More</a>
+              <a href="/services" className="btn">Read More</a>
             </div>
           </div>
         ))}

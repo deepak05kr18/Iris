@@ -1,36 +1,50 @@
-/* Basic styles for the navbar (unchanged from your provided code) */
+/* Basic styles for the navbar */
 .navbar {
     display: flex;
-    align-items: center; /* Centers content vertically */
+    align-items: center;
     justify-content: space-between;
-    background-color: rgb(4, 1, 36); /* Dark background for contrast */
-    padding: 8px 10px; /* Reduced padding to shift content towards the center */
-    position: fixed; /* Sticky navbar */
-    top: 0;
-    width: 100%;
-    height: 100px;
+    background: linear-gradient(to right, #ffffff, #87ceeb); /* White to Sky Blue gradient */
+    padding: 10px 20px; /* More padding for better spacing */
+    position: fixed;
+    top: 50px;
+    left: 8%;
+    transform: translateX(-50%);
+    width: 85%; /* Slightly wider for better alignment */
+    height: 70px;
     z-index: 1000;
-    font-family: 'Arial', sans-serif; /* You can replace this with a custom font family */
+    border-radius: 15px; /* Softer edges */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+/* Navbar when visible */
+.navbar.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Navbar when hidden (scrolling down) */
+.navbar.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
 }
 
 /* Logo and text styling */
 .navbar-logo {
     display: flex;
-    flex-direction: column; /* Arrange logo and text vertically */
-    align-items: center; /* Center both vertically */
+    flex-direction: column;
+    align-items: center;
 }
 
 .navbar-logo img {
-    height: 50px;
-    width: auto; /* Maintain aspect ratio */
-    cursor: pointer; /* Pointer cursor for the logo */
+    height: 30px;
+    width: auto;
+    cursor: pointer;
 }
 
 .logo-text {
-    color: white;
-    font-size: 10px; /* Adjusted font size */
+    color: rgb(5, 5, 5);
+    font-size: 12px;
     font-weight: bold;
-    margin-top: 5px; /* Space between logo and text */
+    margin-top: 5px;
     text-transform: uppercase;
     text-align: center;
 }
@@ -40,86 +54,76 @@
     list-style: none;
     display: flex;
     margin: 0;
-    padding: 15px;
+    padding: 10px;
 }
 
 /* Navbar Menu Items */
 .navbar-menu li {
-    margin: 0 20px; /* Increased margin to give more space between items */
+    margin: 0 15px; /* More spacing between items */
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 /* Link styles */
 .navbar-menu li a {
     text-decoration: none;
-    color: white; /* Light text color for contrast */
-    font-size: 22px; /* Increased font size */
-    font-weight: bold; /* Bold text */
+    color: rgb(0, 0, 0);
+    font-size: 20px;
     transition: color 0.3s, text-shadow 0.1s ease;
-    font-family: 'Arial', sans-serif; /* You can replace this with a custom font family */
+    font-weight: 200;
 }
 
 /* Hover effects */
 .navbar-menu li:hover {
-    transform: scale(1.2); /* Slight enlargement on hover */
+    transform: scale(1.1);
 }
 
 .navbar-menu li:hover a {
-    color: #00ffff; /* Neon blue */
-    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
-    animation: neon-glow 1.5s infinite alternate;
+    color: #0509f5;
 }
 
-/* Dim non-hovered links */
-.navbar-menu li:not(:hover) {
-    opacity: 0.9; /* Dim non-hovered links */
-}
 
-/* Neon glow animation */
-@keyframes neon-glow {
-    0% {
-        text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
-    }
-    50% {
-        text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
-    }
-    100% {
-        text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
-    }
-}
-
-/* Subtle glow for all links */
-.navbar-menu li a {
-    text-shadow: 0 0 2px #fcf9f9;
-}
-
-/* Media query for tablet size screens */
-@media (max-width: 768px) {
-    .navbar-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+/* Tablet View (768px - 1024px) */
+@media (max-width: 1024px) {
+    .navbar {
+        width: 95%;
+        padding: 10px 15px;
     }
 
     .navbar-menu li {
-        margin: 15px 0; /* Increased margin for better spacing */
+        margin: 0 15px;
+    }
+
+    .navbar-menu li a {
+        font-size: 18px;
+    }
+
+    .but {
+        font-size: 16px;
+        padding: 10px 22px;
     }
 }
 
-/* Media query for phone size screens */
-@media (max-width: 480px) {
-    /* Hide the menu initially */
+/* Mobile View (480px - 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        padding: 10px 15px;
+    }
+
     .navbar-menu {
         display: none;
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 60px; /* Adjust based on your navbar height */
+        top: 80px;
         left: 0;
-        background-color: #020808;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow for the menu */
-        padding: 10px 0;
+        background: linear-gradient(to right, #ffffff, #87ceeb);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        padding: 15px 0;
+    }
+
+    .navbar-menu.active {
+        display: flex;
     }
 
     .navbar-menu li {
@@ -127,39 +131,42 @@
         text-align: center;
     }
 
-    /* Add a menu icon (hamburger) on the right */
     .navbar-menu-icon {
-        display: block;
-        cursor: pointer;
-    }
-
-    /* When the menu icon is clicked, show the navbar items */
-    .navbar-menu.active {
         display: flex;
     }
-
-    /* Style for the hamburger menu icon */
-    .navbar-menu-icon div {
-        width: 30px;
-        height: 4px;
-        background-color: white;
-        margin: 6px 0;
-    }
 }
 
-/* This style is for the hamburger menu icon */
-.navbar-menu-icon {
-    display: none; /* Initially hidden on larger screens */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1px 30px;
-}
-
-/* Show the hamburger menu on smaller screens (phones) */
+/* Small Mobile View (Below 480px) */
 @media (max-width: 480px) {
+    .navbar {
+        width: 100%;
+        height: 70px;
+        padding: 8px 12px;
+    }
+
+    .navbar-logo img {
+        height: 40px;
+    }
+
+    .logo-text {
+        font-size: 10px;
+    }
+
+    .navbar-menu {
+        top: 70px;
+        padding: 10px 0;
+    }
+
+    .navbar-menu li a {
+        font-size: 16px;
+    }
+
     .navbar-menu-icon {
-        display: flex;
-        margin-left: 10px; /* You can adjust this value to shift the icon more to the left */
+        padding: 5px 20px;
+    }
+
+    .navbar-menu-icon div {
+        width: 25px;
+        height: 3px;
     }
 }

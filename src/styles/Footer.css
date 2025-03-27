@@ -1,8 +1,137 @@
-/* src/components/Footer.css */
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 .footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
+  background-color: #47cdf5;
+  color: #000000;
+  padding: 30px 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
 }
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 180px;
+  margin: 10px;
+}
+
+.footer-column h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin: 5px 0;
+}
+
+.footer-column ul li a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #ffffff;
+}
+
+/* Company Logo */
+.company {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Contact & Follow Us Section */
+.contact p, 
+.locations p, 
+.follow-us .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.icon {
+  font-size: 22px;
+  color: #000000;
+}
+
+.follow-us .social-icons a {
+  font-size: 28px;
+  color: #ffffff;
+  margin: 0 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.follow-us .social-icons a:hover {
+  color: #f8b400;
+  transform: scale(1.2);
+}
+
+/* Copyright */
+.copyright {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #000000;
+}
+@media (max-width: 768px) {
+  .footer-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-column {
+    flex: unset;
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact p, 
+  .locations p, 
+  .follow-us .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px 10px;
+  }
+
+  .footer-column h2 {
+    font-size: 16px;
+  }
+
+  .footer-column ul li {
+    margin: 3px 0;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+
+  .follow-us .social-icons a {
+    font-size: 24px;
+    margin: 0 5px;
+  }
+}
+

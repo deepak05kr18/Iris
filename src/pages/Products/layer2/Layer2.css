@@ -1,0 +1,25 @@
+
+  .section {
+    display: flex;
+    align-items:center;
+    gap: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+  }
+  
+  .section.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .section-image {
+    width: 40%; /* Increased image size */
+    height: auto;
+  }
+  
+  .section-content {
+    font-size: 18px;
+    color: #333;
+    max-width: 55%; /* Increased content width */
+    line-height: 1.6;
+  }

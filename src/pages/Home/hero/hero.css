@@ -1,21 +1,9 @@
-/* Global Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-}
-
 /* Hero Section */
 .hero {
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    padding-top: 60px; /* Adjust this value based on your navbar height */
 }
 
 /* Adjust height of the hero section if needed */
@@ -23,14 +11,23 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-size: cover; /* Ensure background image covers the whole area */
-    background-position: center center; /* Ensure the image stays centered */
+    background-size: cover;
+    background-position: center center;
     opacity: 0.7;
-    visibility: hidden; /* Hide all slides except the active one */
+    visibility: hidden;
+}
+.hero-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay with 40% opacity */
 }
 
 .hero-slide.active {
-    visibility: visible; /* Only show active slide */
+    visibility: visible;
     opacity: 1;
 }
 
@@ -38,19 +35,20 @@ body {
 .hero-content {
     position: absolute;
     top: 50%;
-    left: 10%;
+    left: 5%;
     transform: translateY(-50%);
     color: white;
-    max-width: 500px;
+    max-width: 90%;
+    text-align: center;
 }
 
 .hero-content h1 {
-    font-size: 70px; /* Increased font size */
+    font-size: 70px;
     margin-bottom: 20px;
 }
 
 .hero-content p {
-    font-size: 24px; /* Increased font size */
+    font-size: 24px;
 }
 
 /* Navigation Arrows */
@@ -58,7 +56,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 50px; /* Increased font size */
+    font-size: 50px;
     background: none;
     border: none;
     color: white;
@@ -67,11 +65,11 @@ body {
 }
 
 .nav-arrow.right {
-    right: 10px; /* Position to the right side */
+    right: 10px;
 }
 
 .nav-arrow.left {
-    left: 10px; /* Position to the left side */
+    left: 10px;
 }
 
 /* Additional Content Styles */
@@ -81,6 +79,46 @@ body {
 }
 
 .content p {
-    font-size: 22px; /* Increased font size */
+    font-size: 22px;
     line-height: 1.6;
+}
+
+/* Responsive Design for Mobile Screens */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 80vh; /* Reduce height for better fit */
+    }
+
+    .hero-content {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 40px; /* Decrease font size */
+        margin-bottom: 10px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .nav-arrow {
+        font-size: 30px; /* Decrease arrow size */
+    }
+
+    .nav-arrow.right {
+        right: 5px;
+    }
+
+    .nav-arrow.left {
+        left: 5px;
+    }
+
+    .content p {
+        font-size: 18px;
+        line-height: 1.4;
+    }
 }

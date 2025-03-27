@@ -2,8 +2,8 @@ import React from 'react';
 import './tech.css';
 
 // Importing images
-import img1 from "../../../components/Images/cards/Lidar.webp";
-import img2 from "../../../components/Images/cards/Photogrammetry.webp";
+import img1 from "../../../components/Images/cards/lidar.jpeg";
+import img2 from "../../../components/Images/cards/photo.jpeg";
 import img3 from "../../../components/Images/cards/Sattelite.jpg";
 import img4 from "../../../components/Images/cards/Avsm.webp";
 import img5 from "../../../components/Images/cards/DGPS.webp";
@@ -32,7 +32,7 @@ const Sections = () => {
             <div className="item-title">{section.title}</div>
             <div className="item-info">
               <p>{section.description}</p>
-              <a href="#" className="btn">Read More</a>
+              <a href="/technologies" className="btn">Read More</a>
             </div>
           </div>
         ))}

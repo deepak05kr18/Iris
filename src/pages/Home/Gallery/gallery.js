@@ -9,13 +9,17 @@ import 'swiper/css/navigation';
 
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
-import slide_image_1 from '../../../components/Images/cards/railways.jpg';
-import slide_image_2 from '../../../components/Images/cards/railways.jpg';
-import slide_image_3 from '../../../components/Images/cards/railways.jpg';
-import slide_image_4 from '../../../components/Images/cards/railways.jpg';
-import slide_image_5 from '../../../components/Images/cards/railways.jpg';
-import slide_image_6 from '../../../components/Images/cards/railways.jpg';
-import slide_image_7 from '../../../components/Images/cards/railways.jpg';
+import slide_image_1 from '../../../components/Images/Team/Resize image project-1.png';
+import slide_image_2 from '../../../components/Images/Team/Resize image project-2.png';
+import slide_image_3 from '../../../components/Images/Team/Resize image project-3.png';
+import slide_image_4 from '../../../components/Images/Team/Resize image project-4.png';
+import slide_image_5 from '../../../components/Images/Team/Resize image project-5.png';
+import slide_image_6 from '../../../components/Images/Team/Resize image project-6.png';
+import slide_image_7 from '../../../components/Images/Team/Resize image project-7.png';
+import slide_image_8 from '../../../components/Images/Team/Resize image project-8.png';
+import slide_image_9 from '../../../components/Images/Team/Resize image project-9.png';
+import slide_image_10 from '../../../components/Images/Team/Resize image project-10.png';
+
 
 function App() {
   return (
@@ -64,6 +68,15 @@ function App() {
         </SwiperSlide>
         <SwiperSlide>
           <img src={slide_image_7} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={slide_image_8} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={slide_image_9} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={slide_image_10} alt="slide_image" />
         </SwiperSlide>
 
         <div className="slider-controler">

@@ -11,8 +11,8 @@ const HeroBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
-    { image: img1, title: "Welcome to Our Website", description: "We provide high-quality services to our clients." },
-    { image: img2, title: "Your Success, Our Commitment", description: "We strive to deliver results that exceed your expectations." },
+    { image: img2, title: "We’re so glad you're here", description: "Our mission is to provide you with top-notch geospatial solutions and modern surveying services with state-of-the-art technologies." },
+    { image: img1, title: "Your challenge is our passion", description: "We strive to deliver results that exceed your expectations." },
     { image: img3, title: "Innovative Solutions", description: "Empowering businesses with cutting-edge technologies." }
   ];
 

@@ -1,11 +1,13 @@
 // src/pages/ServicesPage.js
 import React from 'react';
+import Layer1 from "./services/ser"
+import Client from "../Home/Clients/clients"
 
 const ServicesPage = () => {
     return (
-        <div>
-            <h2>Our Services</h2>
-            <p>Details about the services offered by the company.</p>
+        <div className="contactus">
+            <Layer1 />
+            <Client />
         </div>
     );
 };
