@@ -49,5 +49,60 @@
     line-height: 1.6; /* Improves readability */
   }
   
-  
+  /* Responsive Design */
+
+/* Tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .carddd {
+    width: 80%;
+    padding: 25px;
+  }
+
+  .carddd h1 {
+    font-size: 2.5rem;
+  }
+
+  .carddd p {
+    font-size: 1.4rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .site-container {
+    padding: 1em;
+  }
+
+  .carddd {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .carddd h1 {
+    font-size: 2rem;
+  }
+
+  .carddd p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
+
+/* Smaller mobile devices */
+@media (max-width: 480px) {
+  .carddd {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .carddd h1 {
+    font-size: 1.8rem;
+  }
+
+  .carddd p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
+
   

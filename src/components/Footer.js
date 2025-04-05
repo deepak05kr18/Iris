@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaLinkedin, FaTwitter, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import { FaYoutube, FaLinkedin, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import "../styles/Footer.css"; // Ensure CSS is loaded
 
 const Footer = () => {
@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer-row">
           <div className="footer-column company">
            
-            <h2>Iris Innovations</h2>
+            <h2>Iris Aerial Innovations</h2>
             <p>
               A top-rated survey and engineering consultancy specializing
               in advanced technology and design across multiple sectors.
@@ -20,42 +20,41 @@ const Footer = () => {
           <div className="footer-column">
             <h2>Quick Links</h2>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Case Studies</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about-us">About Us</a></li>
             </ul>
           </div>
 
           <div className="footer-column">
             <h2>Services</h2>
             <ul>
-              <li><a href="#">Irrigation</a></li>
-              <li><a href="#">Mining</a></li>
-              <li><a href="#">Roads</a></li>
-              <li><a href="#">Water</a></li>
-              <li><a href="#">Urban & Rural</a></li>
-              <li><a href="#">Railways</a></li>
+              <li><a href="/services">Irrigation</a></li>
+              <li><a href="/services">Mining</a></li>
+              <li><a href="/services">Water</a></li>
+              <li><a href="/services">Roads</a></li>
+              <li><a href="/services">Urban & Rural</a></li>
+              <li><a href="/services">Railways</a></li>
             </ul>
           </div>
 
           <div className="footer-column">
             <h2>Technologies</h2>
             <ul>
-              <li><a href="#">Lidar</a></li>
-              <li><a href="#">Photogrammetry</a></li>
-              <li><a href="#">Satellite</a></li>
-              <li><a href="#">AVSM</a></li>
-              <li><a href="#">DGPS/ETS</a></li>
-              <li><a href="#">Hydrology</a></li>
+              <li><a href="/technologies">Lidar</a></li>
+              <li><a href="/technologies">Photogrammetry</a></li>
+              <li><a href="/technologies">Satellite</a></li>
+              <li><a href="/technologies">AVSM</a></li>
+              <li><a href="/technologies">DGPS/ETS</a></li>
+              <li><a href="/technologies">Hydrology</a></li>
             </ul>
           </div>
 
           <div className="footer-column">
             <h2>Products</h2>
             <ul>
-              <li><a href="#">Smart Rail Monitor</a></li>
-              <li><a href="#">Smart Road Monitor</a></li>
-              <li><a href="#">Drones</a></li>
+              <li><a href="/products">Smart Rail Monitor</a></li>
+              <li><a href="/products">Smart Road Monitor</a></li>
+              <li><a href="/products">Drones</a></li>
             </ul>
           </div>
         </div>
@@ -68,21 +67,21 @@ const Footer = () => {
         <div className="footer-row">
           <div className="footer-column contact">
             <h2>Contact Us</h2>
-            <p><FaEnvelope className="icon" /> support@example.com</p>
-            <p><FaPhone className="icon" /> +123 456 7890</p>
+            <p><FaEnvelope className="icon" /> info@irisaerial.in</p>
+            <p><FaPhone className="icon" />+91 9599115441</p>
           </div>
 
           <div className="footer-column locations">
             <h2>Locations</h2>
-            <p><FaMapMarkerAlt className="icon" /> Delhi, India</p>
+            <p><FaMapMarkerAlt className="icon" /> B-142, Sector 8, Dwarka 110077, New Delhi, India</p>
           </div>
 
           <div className="footer-column follow-us">
             <h2>Follow Us</h2>
             <div className="social-icons">
-              <a href="#"><FaFacebook className="icon facebook" /></a>
-              <a href="#"><FaLinkedin className="icon linkedin" /></a>
-              <a href="#"><FaTwitter className="icon twitter" /></a>
+              <a href="https://www.youtube.com/channel/UC67VnwwK-1c17aKdLPc9Y8Q"><FaYoutube className="icon facebook" /></a>
+              <a href="https://www.linkedin.com/company/iris-aerial-innovations-pvt-ltd/"><FaLinkedin className="icon linkedin" /></a>
+              <a href="https://www.instagram.com/irisaerial.in?igsh=MTE3ZmUwbnIxOXNrbA=="><FaInstagram className="icon twitter" /></a>
             </div>
           </div>
         </div>
@@ -92,7 +91,7 @@ const Footer = () => {
 
         {/* Copyright Section */}
         <div className="copyright">
-          <p>© 2024 Iris Innovations. All rights reserved.</p>
+          <p>© 2024 Iris Arial Innovations. All rights reserved.</p>
         </div>
       </div>
     </footer>

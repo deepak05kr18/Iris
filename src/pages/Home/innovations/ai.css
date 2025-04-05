@@ -2,7 +2,7 @@
 .ai-section {
   position: relative;
   width: 100%;
-  height: 600px; /* Adjust height as needed */
+  min-height: 500px; /* Allows flexibility for smaller screens */
   background-image: url('../../../components/Images/Background/Ai\ bg.jpeg'); /* Replace with your image path */
   background-size: cover;
   background-position: center;
@@ -33,7 +33,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center; /* Ensures perfect vertical centering */
-  height: 100%; /* Ensures alignment covers the full section height */
+  max-width: 90%; /* Restrict content width */
+  word-wrap: break-word; /* Prevents text from overflowing */
+  overflow-y: auto; /* Allows scrolling if content overflows */
 }
 
 .ai-content h1 {
@@ -51,7 +53,7 @@
 /* Tablets and smaller desktops */
 @media (max-width: 1024px) {
   .ai-section {
-    height: 500px; /* Reduce height for smaller screens */
+    min-height: 500px; /* Reduce height for smaller screens */
   }
 
   .ai-content h1 {
@@ -59,14 +61,14 @@
   }
 
   .ai-content p {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 }
 
 /* Mobile screens */
 @media (max-width: 768px) {
   .ai-section {
-    height: 450px;
+    min-height: 600px;
     padding: 1rem;
   }
 
@@ -83,19 +85,20 @@
 /* Smaller mobile devices */
 @media (max-width: 480px) {
   .ai-section {
-    height: 400px;
+    min-height: 500px;
   }
 
   .ai-content {
-    padding: 1rem;
+    padding: 0.5rem;
+    left: 10px;
   }
 
   .ai-content h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem; /* Further reduced size */
   }
 
   .ai-content p {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 0.8rem; /* Adjusted for better fit */
+    line-height: 1.4;
   }
 }

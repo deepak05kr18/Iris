@@ -4,12 +4,12 @@
     padding: 80px 100px;
     text-align: center;
     color: rgb(12, 12, 12);
-    background: none; /* Background is handled in the pseudo-element */
+    background: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Ensures content stacks vertically */
-    min-height: 500px; /* Ensure minimum height for visibility */
+    flex-direction: column;
+    min-height: 500px;
 }
 
 .layer2-section::before {
@@ -23,29 +23,28 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.5; /* Adjust for desired translucency */
-    z-index: -1; /* Places the background behind the content */
+    opacity: 0.5;
+    z-index: -1;
 }
 
 /* Content Styling */
 .layer2-section h2,
 .layer2-section p {
-    position: relative; /* Ensure text stays on top of the background */
+    position: relative;
     z-index: 1;
-    
 }
 
 .layer2-section h2 {
-    font-size: 2.8rem; /* Reduced font size */
+    font-size: 2.8rem;
     margin-bottom: 20px;
     text-transform: uppercase;
     color: #000000;
 }
 
 .layer2-section p {
-    font-size: 1.2rem; /* Reduced font size */
+    font-size: 1.2rem;
     line-height: 1.5;
-    max-width: 100%; /* Reduced width for content */
+    max-width: 100%;
     margin: 0 auto;
     color: #100f0f;
 }
@@ -53,14 +52,14 @@
 /* Common Drone Styling */
 .layer2-drone {
     position: absolute;
-    width: 100px; /* Adjust size as needed */
-    height: 100px; /* Adjust size as needed */
-    background: url('../../../components/Images/Badges/drone-camera.png'); /* Replace with your drone image path */
+    width: 100px;
+    height: 100px;
+    background: url('../../../components/Images/Badges/drone-camera.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.7; /* Low opacity for the drones */
-    z-index: -1; /* Place behind text */
+    opacity: 0.7;
+    z-index: -1;
 }
 
 /* Individual Animations for Each Drone */
@@ -75,7 +74,6 @@
 .layer2-drone-3 {
     animation: layer2-fly3 14s infinite alternate ease-in-out;
 }
-
 
 /* Animation for Drone 1 */
 @keyframes layer2-fly1 {
@@ -116,5 +114,58 @@
         top: 25%;
         left: 40%;
         transform: translate(-40%, -25%) rotate(-10deg);
+    }
+}
+
+/* Responsive Design */
+
+/* Tablets and smaller desktops */
+@media (max-width: 1024px) {
+    .layer2-section {
+        padding: 60px 50px;
+    }
+    .layer2-section h2 {
+        font-size: 2.2rem;
+    }
+    .layer2-section p {
+        font-size: 1rem;
+    }
+    .layer2-drone {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+    .layer2-section {
+        padding: 40px 20px;
+    }
+    .layer2-section h2 {
+        font-size: 1.8rem;
+    }
+    .layer2-section p {
+        font-size: 0.9rem;
+    }
+    .layer2-drone {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Smaller mobile devices */
+@media (max-width: 480px) {
+    .layer2-section {
+        padding: 20px 10px;
+    }
+    .layer2-section h2 {
+        font-size: 1.5rem;
+    }
+    .layer2-section p {
+        font-size: 0.8rem;
+    }
+    .layer2-drone {
+        width: 50px;
+        height: 50px;
     }
 }

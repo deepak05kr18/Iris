@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./hero.css";  // Importing CSS for styling
-import img1 from "../../../components/Images/Background/hero3.jpg";
+import img1 from "../../../components/Images/Background/Satellite.jpg";
 import img2 from "../../../components/Images/Background/hero1.jpg";
 import img3 from "../../../components/Images/Background/hero2.webp";
 

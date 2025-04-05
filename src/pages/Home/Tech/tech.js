@@ -7,7 +7,7 @@ import img2 from "../../../components/Images/cards/photo.jpeg";
 import img3 from "../../../components/Images/cards/Sattelite.jpg";
 import img4 from "../../../components/Images/cards/Avsm.webp";
 import img5 from "../../../components/Images/cards/DGPS.webp";
-import img6 from "../../../components/Images/cards/Hydrology.webp";
+import img6 from "../../../components/Images/Background/Hydrology.jpeg";
 
 // Section data with images
 const sectionData = [

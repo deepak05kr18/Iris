@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { FaChevronLeft, FaChevronRight, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "./ser.css";
 
 // Import local images
@@ -19,42 +20,88 @@ const App = () => {
     { id: 5, name: "Water", des: "Using drones, we provide aerial surveys, irrigation system monitoring, crop health assessment, and water quality analysis. Additional services include dam inspections, watershed management, and flood monitoring for sustainable resource management", img: img5 },
   ]);
 
+  const [isMobile, setIsMobile] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const handleNext = () => {
-    setItems((prevItems) => [...prevItems.slice(1), prevItems[0]]);
+    setItems(prev => [...prev.slice(1), prev[0]]);
+    setExpanded(false);
   };
 
   const handlePrev = () => {
-    setItems((prevItems) => [prevItems[prevItems.length - 1], ...prevItems.slice(0, -1)]);
+    setItems(prev => [prev[prev.length - 1], ...prev.slice(0, -1)]);
+    setExpanded(false);
+  };
+
+  const toggleExpand = () => {
+    setExpanded(!expanded);
   };
 
   return (
     <div className="ser-container">
-      <div className="ser-slide">
-        {items.map((item, index) => (
-          <div
-            key={item.id}
-            className={`ser-item ${index === 0 ? "ser-main" : ""}`}
-            style={{ backgroundImage: `url(${item.img})` }}
-          >
-            {index === 1 && (
-              <div className="ser-content">
-                <div className="ser-name">{item.name}</div>
-                <div className="ser-des">{item.des}</div>
-                <button>See More</button>
-              </div>
-            )}
+      {isMobile ? (
+        /* Mobile View */
+        <div className="mobile-view">
+          <div 
+            className="mobile-image" 
+            style={{ backgroundImage: `url(${items[0].img})` }}
+          />
+          <div className="mobile-content">
+            <h2>{items[0].name}</h2>
+            <p>{items[0].des}</p>
           </div>
-        ))}
-      </div>
-
-      <div className="ser-button">
-        <button className="ser-prev" onClick={handlePrev}>
-          <i className="fa-solid fa-arrow-left"></i>
-        </button>
-        <button className="ser-next" onClick={handleNext}>
-          <i className="fa-solid fa-arrow-right"></i>
-        </button>
-      </div>
+          <div className="mobile-buttons">
+            <button className="mobile-prev" onClick={handlePrev}>
+              <FaChevronLeft className="icon" />
+            </button>
+            <button className="mobile-next" onClick={handleNext}>
+              <FaChevronRight className="icon" />
+            </button>
+          </div>
+        </div>
+      ) : (
+        /* Desktop View */
+        <>
+          <div className="ser-slide">
+            {items.map((item, index) => (
+              <div
+                key={item.id}
+                className={`ser-item ${index === 0 ? "ser-main" : ""}`}
+                style={{ backgroundImage: `url(${item.img})` }}
+              >
+                {index === 1 && (
+                  <div className="ser-content">
+                    <div className="ser-name">{item.name}</div>
+                    <div className={`ser-des ${expanded ? "expanded" : ""}`}>
+                      {item.des}
+                    </div>
+                    <button onClick={toggleExpand}>
+                      {expanded ? "Show Less" : "See More"}
+                    </button>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          <div className="ser-button">
+            <button className="ser-prev" onClick={handlePrev}>
+              <FaArrowLeft className="icon" />
+            </button>
+            <button className="ser-next" onClick={handleNext}>
+              <FaArrowRight className="icon" />
+            </button>
+          </div>
+        </>
+      )}
     </div>
   );
 };

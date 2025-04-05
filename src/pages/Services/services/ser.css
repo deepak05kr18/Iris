@@ -1,9 +1,8 @@
-/* General Reset */
-
+/* Original Desktop Styles */
 .ser-container {
   position: relative;
   width: 100%;
-  height: 100vh ; 
+  height: 100vh;
   background: #f5f5f5;
   box-shadow: 0 30px 50px #dbdbdb;
 }
@@ -29,29 +28,27 @@
 }
 
 .ser-slide .ser-item:nth-child(1),
-.ser-slide .ser-item:nth-child(2){
-    top: 0;
-    left: 0;
-    transform: translate(0, 0);
-    border-radius: 0;
-    width: 100%;
-    height: 100%;
+.ser-slide .ser-item:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.ser-slide .ser-item:nth-child(3){
-    left: 50%;
+.ser-slide .ser-item:nth-child(3) {
+  left: 50%;
 }
-.ser-slide .ser-item:nth-child(4){
-    left: calc(50% + 220px);
+.ser-slide .ser-item:nth-child(4) {
+  left: calc(50% + 220px);
 }
-.ser-slide .ser-item:nth-child(5){
-    left: calc(50% + 440px);
+.ser-slide .ser-item:nth-child(5) {
+  left: calc(50% + 440px);
 }
-
-/* here n = 0, 1, 2, 3,... */
-.ser-slide .ser-item:nth-child(n + 6){
-    left: calc(50% + 660px);
-    opacity: 0;
+.ser-slide .ser-item:nth-child(n + 6) {
+  left: calc(50% + 660px);
+  opacity: 0;
 }
 
 .ser-item .ser-content {
@@ -64,11 +61,13 @@
   transform: translate(0, -50%);
   font-family: system-ui;
   display: none;
-  background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 15px;
-  backdrop-filter: blur(10px); /* Frosted glass effect */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
+  max-height: 70vh;
+  overflow: hidden;
 }
 
 .ser-slide .ser-item:nth-child(2) .ser-content {
@@ -88,6 +87,14 @@
   margin-bottom: 20px;
   opacity: 0;
   animation: ser-animate 1s ease-in-out 0.3s 1 forwards;
+  max-height: 100px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.ser-content .ser-des.expanded {
+  max-height: 500px;
+  overflow-y: auto;
 }
 
 .ser-content button {
@@ -95,30 +102,12 @@
   border: none;
   cursor: pointer;
   opacity: 0;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgb(65, 217, 241);
   backdrop-filter: blur(10px);
   color: white;
   font-weight: bold;
   border-radius: 10px;
   animation: ser-animate 1s ease-in-out 0.6s 1 forwards;
-  transition: all 0.3s ease;
-}
-
-.ser-content button:hover {
-  background: rgba(255, 255, 255, 0.5);
-}
-
-@keyframes ser-animate {
-  from {
-    opacity: 0;
-    transform: translate(0, 100px);
-    filter: blur(33px);
-  }
-  to {
-    opacity: 1;
-    transform: translate(0);
-    filter: blur(0);
-  }
 }
 
 .ser-button {
@@ -136,10 +125,144 @@
   cursor: pointer;
   margin: 0 5px;
   border: 1px solid #000;
-  transition: 0.3s;
 }
 
-.ser-button button:hover {
-  background: #ababab;
-  color: #fff;
+@keyframes ser-animate {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+  }
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .ser-container {
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .mobile-view {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .mobile-image {
+    height: 40vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .mobile-content {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  
+  .mobile-content h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .mobile-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 0; /* Removed margin since no button */
+  }
+  
+  .mobile-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+    background: #f5f5f5;
+  }
+  
+  .mobile-buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #27eaea;
+    color: white;
+    border: none;
+    font-size: 20px;
+  }
+}
+
+/* Mobile Buttons */
+.mobile-buttons {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+}
+
+.mobile-prev, .mobile-next {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-prev {
+  margin-right: auto; /* Pushes to left */
+}
+
+.mobile-next {
+  margin-left: auto; /* Pushes to right */
+}
+
+/* Desktop Buttons */
+.ser-button {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+}
+
+.ser-prev, .ser-next {
+  width: 40px;
+  height: 35px;
+  border-radius: 8px;
+  background: rgba(69, 230, 242, 0.998);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ser-prev {
+  margin-right: auto; /* Pushes to left */
+}
+
+.ser-next {
+  margin-left: auto; /* Pushes to right */
+}
+
+/* Icon Styles */
+.icon {
+  font-size: 1.2em;
+}
+
+/* Rest of your existing CSS remains unchanged */

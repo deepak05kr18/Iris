@@ -3,8 +3,8 @@
     position: relative;
     width: 100%;
     height: 90vh;
-    background-size: cover; /* Ensure the background image covers the entire section */
-    background-position: center center; /* Keep the image centered */
+    background-size: cover;
+    background-position: center center;
     overflow: hidden;
 }
 
@@ -15,24 +15,78 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity and color as needed */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
 /* Layer_1 Content */
 .layer_1-content {
     position: absolute;
-    top: 50%; /* Position from the top of the layer_1 section */
-    left: 50%; /* Position from the left of the layer_1 section */
-    transform: translate(-50%, -50%); /* Adjust to center */
-    z-index: 2; /* Ensure the text is above the overlay */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
     color: white;
-    text-align: center; /* Center-align the text */
-    max-width: 600px; /* Optional: Limit the width of the content */
+    text-align: center;
+    max-width: 600px;
+    padding: 0 20px;
+    width: 90%;
 }
 
 .layer_1-content h1 {
-    font-size: 3.5rem; /* Adjust font size */
-    margin: 0; /* Remove default margins */
+    font-size: 3.5rem;
+    margin: 0;
     font-weight: bold;
+    line-height: 1.2;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .layer_1-content h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .layer_1 {
+        height: 80vh;
+    }
+    
+    .layer_1-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .layer_1 {
+        height: 70vh;
+    }
+    
+    .layer_1-content h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .layer_1 {
+        height: 60vh;
+    }
+    
+    .layer_1-content {
+        max-width: 90%;
+    }
+    
+    .layer_1-content h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .layer_1 {
+        height: 50vh;
+    }
+    
+    .layer_1-content h1 {
+        font-size: 1.5rem;
+    }
 }

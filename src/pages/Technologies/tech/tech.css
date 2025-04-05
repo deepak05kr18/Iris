@@ -1,61 +1,162 @@
 /* Wrapper for all containers */
 .tech-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: hsl(201, 74%, 79%);
-    
-  }
-  
-  /* Common styling for clay containers */
-  .clay-container {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    width: 80%;
-    height: fit-content;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 20px;
-    background-color: hsl(120deg 20% 95%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: hsl(201, 74%, 79%);
+  gap: 30px;
+}
+
+/* Common styling for clay containers */
+.clay-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  min-height: 200px;
+  margin: 0;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: hsl(120deg 20% 95%);
   box-shadow: 
-    34px 34px 68px 0px hsl(204, 10%, 50%), 
-    inset -8px -8px 16px 0px hsl(120deg 20% 50% / 70%), 
-    inset 0px 14px 28px 0px hsl(120deg 20% 95%);
+      20px 20px 50px 0px hsl(204, 10%, 50%), 
+      inset -8px -8px 16px 0px hsl(120deg 20% 50% / 70%), 
+      inset 0px 14px 28px 0px hsl(120deg 20% 95%);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clay-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+      25px 25px 60px 0px hsl(204, 10%, 50%), 
+      inset -8px -8px 16px 0px hsl(120deg 20% 50% / 70%), 
+      inset 0px 14px 28px 0px hsl(120deg 20% 95%);
+}
+
+/* Content styling */
+.clay-container .content {
+  flex: 1;
+  padding: 0 30px;
+  max-width: 70%;
+}
+
+.clay-container .content h2 {
+  margin: 0 0 15px;
+  font-size: 1.8em;
+  color: #2a4365;
+  font-weight: 600;
+}
+
+.clay-container .content p {
+  margin: 0;
+  color: #4a5568;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Image styling */
+.clay-container img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.clay-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+  .clay-container {
+      width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  .tech-wrapper {
+      padding: 30px 15px;
   }
   
-  /* Content styling */
+  .clay-container {
+      flex-direction: column;
+      padding: 25px;
+      gap: 20px;
+  }
+  
   .clay-container .content {
-    max-width: 80%;
+      max-width: 100%;
+      padding: 0;
+      text-align: center;
+  }
+  
+  .clay-container img {
+      width: 160px;
+      height: 160px;
+  }
+  
+  .img-right, .img-left {
+      flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .clay-container {
+      width: 95%;
+      padding: 20px;
   }
   
   .clay-container .content h2 {
-    margin: 0 0 10px;
-    font-size: 1.5em;
-    color: #333;
+      font-size: 1.5em;
   }
   
   .clay-container .content p {
-    margin: 0;
-    color: #666;
-    font-size: 1em;
+      font-size: 1em;
   }
   
-  /* Image styling */
   .clay-container img {
-    width: 150px;
-    height: 90%;
-    border-radius: 10px;
+      width: 140px;
+      height: 140px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tech-wrapper {
+      padding: 20px 10px;
+      gap: 20px;
   }
   
-  /* Right-aligned image */
-  .img-right {
-    flex-direction: row-reverse;
+  .clay-container {
+      width: 100%;
+      border-radius: 15px;
   }
   
-  /* Left-aligned image */
-  .img-left {
-    flex-direction: row;
+  .clay-container .content h2 {
+      font-size: 1.3em;
+      margin-bottom: 10px;
   }
   
+  .clay-container img {
+      width: 120px;
+      height: 120px;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.clay-container {
+  animation: fadeIn 0.6s ease-out forwards;
+}
