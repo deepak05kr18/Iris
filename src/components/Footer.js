@@ -28,7 +28,7 @@ const Footer = () => {
           <div className="footer-column">
             <h2>Services</h2>
             <ul>
-              <li><a href="/services">Irrigation</a></li>
+              <li><a href="https://poetic-meerkat-ff34ff.netlify.app/services">Irrigation</a></li>
               <li><a href="/services">Mining</a></li>
               <li><a href="/services">Water</a></li>
               <li><a href="/services">Roads</a></li>
