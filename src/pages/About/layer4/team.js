@@ -5,27 +5,33 @@ import img1 from "../../../components/Images/Team/Resize image project-6.png";
 import img2 from "../../../components/Images/Team/Deep.png";
 import img3 from "../../../components/Images/Team/yashwant_resized_1300x900.jpeg";
 import img4 from "../../../components/Images/Team/Soumya.png";
+import img5 from "../../../components/Images/Team/arshil.jpg";
+import img6 from "../../../components/Images/Team/manku.jpg";
+import img7 from "../../../components/Images/Team/prerna.jpg";
 
 const teamMembers = [
-  { name: "Nikhil", role: "CEO & Founder", img: img1 },
+  { name: "Nikhil Saini", role: "CEO & Founder", img: img1 },
   { name: "Deep Kumar", role: "Co-Founder and CTO", img: img2 },
   { name: "Yashwant Singh", role: "Vice President Global", img: img3 },
   { name: "Saumya Verma", role: "Senior Associate", img: img4 },
-  
+  { name: "Arshil Raza", role: "Business Development Executive", img: img5 },
+  { name: "Mayank Giri", role: "Business Analyst", img: img6 },
+  { name: "Prerna Prachi", role: "Business Development Executive", img: img7 },
 ];
 
 const Team = () => {
   const sliderRef = useRef(null);
+  const cardWidth = 300; // Width of each team card + margin
 
   const scrollLeft = () => {
     if (sliderRef.current) {
-      sliderRef.current.scrollBy({ left: -300, behavior: "smooth" });
+      sliderRef.current.scrollBy({ left: -cardWidth, behavior: "smooth" });
     }
   };
 
   const scrollRight = () => {
     if (sliderRef.current) {
-      sliderRef.current.scrollBy({ left: 300, behavior: "smooth" });
+      sliderRef.current.scrollBy({ left: cardWidth, behavior: "smooth" });
     }
   };
 
@@ -38,9 +44,9 @@ const Team = () => {
         <button className="scroll-btn left" onClick={scrollLeft}>
           <AiOutlineLeft size={25} />
         </button>
-        <div className="row" ref={sliderRef}>
+        <div className="team-carousel" ref={sliderRef}>
           {teamMembers.map((member, index) => (
-            <div className="column" key={index}>
+            <div className="team-card" key={index}>
               <div className="team-9">
                 <div className="team-img">
                   <img src={member.img} alt={member.name} />
