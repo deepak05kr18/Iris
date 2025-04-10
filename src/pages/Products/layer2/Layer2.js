@@ -1,7 +1,7 @@
 import React from 'react';
 import './Layer2.css';
 import img1 from '../../../components/Images/cards/rail.jpg';
-import img2 from '../../../components/Images/cards/road.jpg';
+import img2 from '../../../components/Images/cards/road.webp';
 import img3 from '../../../components/Images/cards/drones.jpg';
 
 const Layer2 = () => {

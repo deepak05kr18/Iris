@@ -2,7 +2,7 @@
 .ai-section {
   position: relative;
   width: 100%;
-  min-height: 500px; /* Allows flexibility for smaller screens */
+  min-height: 100vh; /* Allows flexibility for smaller screens */
   background-image: url('../../../components/Images/Background/Ai\ bg.jpeg'); /* Replace with your image path */
   background-size: cover;
   background-position: center;
@@ -46,6 +46,7 @@
 .ai-content p {
   font-size: 1.5rem; /* Increased font size */
   line-height: 1.8;
+  left: 80px;
 }
 
 /* Responsive Design */

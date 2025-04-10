@@ -1,6 +1,6 @@
 import React from "react";
 import "./layer1.css"; // Importing CSS for styling
-import img1 from "../../../components/Images/Background/together.jpg";
+import img1 from "../../../components/Images/Background/together_converted.webp";
 
 const Layer1 = () => {
   return (

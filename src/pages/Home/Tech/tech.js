@@ -5,7 +5,7 @@ import './tech.css';
 // Importing images
 import img1 from "../../../components/Images/cards/lidar.jpeg";
 import img2 from "../../../components/Images/cards/photo.jpeg";
-import img3 from "../../../components/Images/cards/Sattelite.jpg";
+import img3 from "../../../components/Images/cards/Sattelite.webp";
 import img4 from "../../../components/Images/cards/Avsm.webp";
 import img5 from "../../../components/Images/cards/DGPS.webp";
 import img6 from "../../../components/Images/Background/Hydrology.jpeg";

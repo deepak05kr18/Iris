@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import './card.css';
 
 // Importing images
-import img1 from "../../../components/Images/cards/Railways2.jpeg";
-import img2 from "../../../components/Images/cards/roads.jpg";
-import img3 from "../../../components/Images/Background/rural.jpg";
-import img4 from "../../../components/Images/cards/irrigation.jpg";
-import img5 from "../../../components/Images/cards/mines.jpg";
-import img6 from "../../../components/Images/cards/water.jpg";
+import img1 from "../../../components/Images/cards/Railways2.webp";
+import img2 from "../../../components/Images/cards/road.webp";
+import img3 from "../../../components/Images/cards/rural.webp";
+import img4 from "../../../components/Images/cards/irrigation.webp";
+import img5 from "../../../components/Images/cards/mines.webp";
+import img6 from "../../../components/Images/cards/water.webp";
 
 // Card data with images
 const cardsData = [

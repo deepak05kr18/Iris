@@ -3,7 +3,7 @@ import "./tech.css";
 import img1 from "../../../components/Images/cards/Lidar.webp"
 import img2 from "../../../components/Images/cards/Photogrammetry.webp"
 import img3 from "../../../components/Images/cards/Avsm.webp"
-import img4 from "../../../components/Images/cards/Sattelite.jpg"
+import img4 from "../../../components/Images/cards/Sattelite.webp"
 import img5 from "../../../components/Images/cards/Hydrology.webp"
 import img6 from "../../../components/Images/cards/DGPS.webp"
 

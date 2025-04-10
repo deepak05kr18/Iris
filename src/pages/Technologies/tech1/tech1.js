@@ -1,6 +1,6 @@
 import React from "react";
 import "./tech1.css"; // Importing CSS for styling
-import img1 from "../../../components/Images/Background/techbg.jpg";
+import img1 from "../../../components/Images/Background/techh.jpg";
 
 const Tech1 = () => {
   return (
