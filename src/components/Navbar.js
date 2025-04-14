@@ -1,27 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Navbar.css';
-import logo from "./Images/Logo/Alogo.jpeg";
+import logo from "./Images/Logo/Iris_dynamic-removebg-preview (1).png";
 
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
+    const [isTop, setIsTop] = useState(true);
 
-    // Toggle the menu when the hamburger is clicked
     const handleMenuToggle = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    // Close the menu when a link is clicked (for mobile view)
     const handleLinkClick = () => {
         setIsMenuOpen(false);
     };
 
-    // Scroll event listener
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollPos = window.scrollY;
+            
+            // Check if we're at the top of the page
+            setIsTop(currentScrollPos < 10);
+            
+            // Handle navbar visibility on scroll down/up
             setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
             setPrevScrollPos(currentScrollPos);
         };
@@ -31,24 +34,19 @@ function Navbar() {
     }, [prevScrollPos]);
 
     return (
-        <nav className={`navbar ${visible ? 'visible' : 'hidden'}`}>
+        <nav className={`navbar ${visible ? 'visible' : 'hidden'} ${isTop ? 'transparent' : 'solid'}`}>
             <div className="navbar-logo">
                 <Link to="/" onClick={handleLinkClick}>
                     <img src={logo} alt="Company Logo" />
                 </Link>
-                <div className="logo-text">
-                    Iris Aerial Innovations
-                </div>
             </div>
 
-            {/* Hamburger menu icon for mobile */}
             <div className="navbar-menu-icon" onClick={handleMenuToggle}>
                 <div className={isMenuOpen ? "bar open" : "bar"}></div>
                 <div className={isMenuOpen ? "bar open" : "bar"}></div>
                 <div className={isMenuOpen ? "bar open" : "bar"}></div>
             </div>
 
-            {/* Navbar Menu */}
             <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
                 <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
                 <li><Link to="/about-us" onClick={handleLinkClick}>About Us</Link></li>

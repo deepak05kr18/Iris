@@ -30,23 +30,30 @@ const Layer2 = () => {
   ];
 
   return (
-    <div className='App'>
-      {sections.map((section) => (
-        <div
-          key={section.id}
-          className={`section ${section.reverse ? 'reverse' : ''}`}
-        > 
-          <div className='section-text'>
-            <h2 className='section-heading'>{section.heading}</h2>
-            <p className='section-content'>{section.content}</p>
+    <div className='layer2-container'>
+      
+      <div className='layer2-sections'>
+        {sections.map((section) => (
+          <div
+            key={section.id}
+            className={`layer2-section ${section.reverse ? 'reverse' : ''}`}
+          > 
+            <div className='section-image-container'>
+              <img
+                src={section.image}
+                alt={section.heading}
+                className='section-image'
+                loading='lazy'
+              />
+            </div>
+            <div className='section-text glassmorphism-card'>
+              <h2 className='section-heading'>{section.heading}</h2>
+              <div className='section-divider'></div>
+              <p className='section-content'>{section.content}</p>
+            </div>
           </div>
-          <img
-            src={section.image}
-            alt={`Section ${section.id}`}
-            className='section-image'
-          />
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

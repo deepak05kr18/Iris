@@ -1,11 +1,12 @@
 .client-logos-container {
   overflow: hidden;
   width: 100%;
-  background-color: #f9f9f9; /* Optional background */
+  background-color: #ffffff; /* Optional background */
   padding: 30px 0; /* Optional padding */
 }
 
 .logos-wrapper {
+  margin-top: 50px;
   display: flex;
   width: max-content; /* Ensure the wrapper's width is determined by the content */
   animation: scroll 20s linear infinite; /* Reduced speed */

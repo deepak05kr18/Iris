@@ -1,173 +1,148 @@
-/* Layer_1 Section */
-.layer_1 {
-  position: relative;
-  width: 100%;
-  height: 90vh;
-  background-size: cover;
-  background-position: center center;
-  overflow: hidden;
-}
-
-.layer_1-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
-.layer_1-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  color: white;
-  text-align: center;
-  max-width: 600px;
-  padding: 0 20px;
-  width: 90%;
-}
-
-.layer_1-content h1 {
-  font-size: 3.5rem;
-  margin: 0;
-  font-weight: bold;
-  line-height: 1.2;
-}
-
-/* Section Styles */
-.section {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
-  background: #ffffff;
-  border-radius: 12px;
-  margin: 30px auto;
+.layer2-container {
+  padding: 4rem 2rem;
   max-width: 1200px;
+  margin: 0 auto;
 }
 
-.section.reverse {
-  flex-direction: row-reverse;
+.layer2-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.layer2-header h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.layer2-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.layer2-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.layer2-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.section-image-container {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .section-image {
-  width: 40%;
+  width: 100%;
   height: auto;
-  border-radius: 8px;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.section-image:hover {
+  transform: scale(1.02);
+}
+
+.section-text {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.glassmorphism-card {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.section-heading {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.section-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #1f0999 0%, #00f2fe 100%);
+  margin-bottom: 1.5rem;
+  border-radius: 2px;
 }
 
 .section-content {
-  font-size: 18px;
-  color: #333;
-  max-width: 55%;
+  font-size: 1.1rem;
   line-height: 1.6;
+  color: #555;
 }
 
-.section-content h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #222;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
-  .layer_1-content h1 {
-      font-size: 3rem;
+/* Desktop layout */
+@media (min-width: 992px) {
+  .layer2-section {
+    flex-direction: row;
   }
   
-  .section {
-      max-width: 1000px;
-  }
-}
-
-@media (max-width: 992px) {
-  .layer_1 {
-      height: 80vh;
+  .layer2-section.reverse {
+    flex-direction: row-reverse;
   }
   
-  .layer_1-content h1 {
-      font-size: 2.5rem;
+  .section-text {
+    width: 50%;
   }
   
-  .section {
-      flex-direction: column;
-      gap: 30px;
-      padding: 30px;
-  }
-  
-  .section.reverse {
-      flex-direction: column;
-  }
-  
-  .section-image, 
-  .section-content {
-      max-width: 100%;
-      width: 100%;
+  .section-image-container {
+    width: 50%;
   }
 }
 
-@media (max-width: 768px) {
-  .layer_1 {
-      height: 70vh;
+/* Tablet layout */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section-text {
+    padding: 1.5rem;
   }
   
-  .layer_1-content h1 {
-      font-size: 2.2rem;
+  .section-heading {
+    font-size: 1.6rem;
   }
   
   .section-content {
-      font-size: 16px;
-  }
-  
-  .section-content h2 {
-      font-size: 1.8rem;
+    font-size: 1rem;
   }
 }
 
-@media (max-width: 576px) {
-  .layer_1 {
-      height: 60vh;
+/* Mobile layout */
+@media (max-width: 767px) {
+  .layer2-container {
+    padding: 3rem 1rem;
   }
   
-  .layer_1-content h1 {
-      font-size: 1.8rem;
+  .layer2-header h2 {
+    font-size: 2rem;
   }
   
-  .section {
-      padding: 20px;
-      margin: 20px auto;
+  .layer2-header p {
+    font-size: 1rem;
   }
   
-  .section-content h2 {
-      font-size: 1.6rem;
-  }
-}
-
-@media (max-width: 400px) {
-  .layer_1 {
-      height: 50vh;
+  .section-text {
+    padding: 1.5rem;
   }
   
-  .layer_1-content h1 {
-      font-size: 1.5rem;
-  }
-  
-  .section {
-      padding: 15px;
-      margin: 15px auto;
-      border-radius: 8px;
+  .section-heading {
+    font-size: 1.5rem;
   }
   
   .section-content {
-      font-size: 15px;
-  }
-  
-  .section-content h2 {
-      font-size: 1.4rem;
+    font-size: 1rem;
   }
 }

@@ -68,7 +68,13 @@ const Footer = () => {
         <div className="footer-row">
           <div className="footer-column contact">
             <h2>Contact Us</h2>
-            <p><FaEnvelope className="icon" /> info@irisaerial.in</p>
+            <p><FaEnvelope className="icon" /> 
+            info@irisaerial.in<br>
+
+            </br>
+            global@irisaerial.in
+            </p>
+          <br></br>
             <p><FaPhone className="icon" />+91 9599115441</p>
           </div>
 
