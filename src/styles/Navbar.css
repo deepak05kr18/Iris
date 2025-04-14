@@ -19,7 +19,7 @@
 
 /* Transparent state (initial) */
 .navbar.transparent {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.534);
     backdrop-filter: blur(5px);
     box-shadow: none;
 }
@@ -55,7 +55,7 @@
 }
 
 .logo-text {
-    color: rgb(5, 5, 5);
+    color: rgb(255, 255, 255);
     font-size: 12px;
     font-weight: bold;
     margin-top: 5px;
