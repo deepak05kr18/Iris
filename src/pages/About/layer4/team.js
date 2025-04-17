@@ -8,6 +8,11 @@ import img4 from "../../../components/Images/Team/Soumya.png";
 import img5 from "../../../components/Images/Team/arshil.jpg";
 import img6 from "../../../components/Images/Team/manku.jpg";
 import img7 from "../../../components/Images/Team/prerna.jpg";
+import img8 from "../../../components/Images/Team/pratik.webp";
+import img9 from "../../../components/Images/Team/manoj.webp";
+import img10 from "../../../components/Images/Team/WhatsApp Image 2025-04-16 at 2.15.52 PM.webp";
+import img11 from "../../../components/Images/Team/Aadi.webp";
+
 
 const teamMembers = [
   { name: "Nikhil Saini", role: "CEO & Founder", img: img1 },
@@ -17,6 +22,10 @@ const teamMembers = [
   { name: "Arshil Raza", role: "Business Development Executive", img: img5 },
   { name: "Mayank Giri", role: "Business Analyst", img: img6 },
   { name: "Prerna Prachi", role: "Business Development Executive", img: img7 },
+  { name: "Hitesh Kumar Sharma", role: "Project Manager", img: img8 },
+  { name: "Manoj Kumar", role: "Software Developer", img: img9 },
+  { name: "Pawam kumar", role: "Software Developer", img: img10 },
+  { name: "Aditya Raj", role: "Strategic Marketing Intern", img: img11 },
 ];
 
 const Team = () => {

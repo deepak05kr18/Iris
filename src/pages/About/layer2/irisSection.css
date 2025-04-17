@@ -1,0 +1,103 @@
+.dd-section-rr {
+    position: relative;
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #000;
+    background: #f9f9f9;
+    overflow: hidden;
+    text-align: center;
+}
+
+.dd-heading-rr {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: #222;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.dd-heading-rr::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #0077b6;
+}
+
+.dd-container-rr {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.dd-text-rr {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.dd-paragraph-rr {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.dd-drone-rr {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('../../../components/Images/Badges/drone-camera.png') center/contain no-repeat;
+    opacity: 0.7;
+    z-index: 0;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+}
+
+.dd-drone1-rr {
+    animation: dd-fly1-rr 12s infinite alternate ease-in-out;
+}
+
+.dd-drone2-rr {
+    animation: dd-fly2-rr 14s infinite alternate ease-in-out;
+}
+
+.dd-drone3-rr {
+    animation: dd-fly3-rr 16s infinite alternate ease-in-out;
+}
+
+@keyframes dd-fly1-rr {
+    0% { top: 10%; left: 5%; transform: rotate(0deg); }
+    100% { top: 15%; left: 80%; transform: rotate(-10deg); }
+}
+
+@keyframes dd-fly2-rr {
+    0% { top: 20%; left: 10%; transform: rotate(0deg); }
+    100% { top: 10%; left: 70%; transform: rotate(-20deg); }
+}
+
+@keyframes dd-fly3-rr {
+    0% { top: 30%; left: 5%; transform: rotate(0deg); }
+    100% { top: 25%; left: 60%; transform: rotate(-10deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dd-section-rr { padding: 3rem 1rem; }
+    .dd-heading-rr { font-size: 2rem; }
+    .dd-text-rr { font-size: 1rem; }
+    .dd-drone-rr { width: 60px; height: 60px; }
+}
+
+@media (max-width: 480px) {
+    .dd-section-rr { padding: 2rem 0.5rem; }
+    .dd-heading-rr { font-size: 1.8rem; }
+    .dd-text-rr { font-size: 0.95rem; }
+    .dd-drone-rr { width: 50px; height: 50px; }
+}

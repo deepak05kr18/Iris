@@ -55,7 +55,9 @@
   position: absolute;
   top: 50%;
   left: 100px;
-  width: 300px;
+  max-width: 600px; /* Increased max-width */
+  min-width: 300px; /* Keep minimum width */
+  width: auto; /* Make width flexible */
   text-align: left;
   color: #fff;
   transform: translate(0, -50%);
@@ -66,7 +68,6 @@
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  max-height: 70vh;
   overflow: hidden;
 }
 
@@ -92,10 +93,7 @@
   transition: max-height 0.5s ease;
 }
 
-.ser-content .ser-des.expanded {
-  max-height: 500px;
-  overflow-y: auto;
-}
+
 
 .ser-content button {
   padding: 10px 20px;

@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaYoutube, FaLinkedin, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
-import "../styles/Footer.css"; // Ensure CSS is loaded
+import "../styles/Footer.css"; 
+import img1 from '../components/Images/Logo/iris_logo.jpeg';
 
 const Footer = () => {
   return (
@@ -11,13 +12,16 @@ const Footer = () => {
         {/* First Row */}
         <div className="footer-row">
           <div className="footer-column company">
-            <h2>Iris Aerial Innovations</h2>
-            <p>
-              A top-rated survey and engineering consultancy specializing
-              in advanced technology and design across multiple sectors.
-            </p>
+            <div className="logo-container">
+              <img src={img1} alt="Iris Aerial Innovations Logo"/>
+              <div className="logo-text">
+                <span className="iris-text">IRIS</span>
+                <span className="aerial-text">Aerial Innovations</span>
+              </div>
+            </div>
           </div>
 
+          {/* Rest of your footer columns remain the same */}
           <div className="footer-column">
             <h2>Quick Links</h2>
             <ul>
@@ -55,26 +59,23 @@ const Footer = () => {
             <ul>
               <li><Link to="/products">Smart Rail Monitor</Link></li>
               <li><Link to="/products">Smart Road Monitor</Link></li>
-              <li><Link to="/products">Drones</Link></li>
             </ul>
           </div>
         </div>
 
+        {/* Rest of your footer remains the same */}
         <br />
-        <hr />
+        <hr className="divider" />
         <br />
 
-        {/* Second Row */}
         <div className="footer-row">
           <div className="footer-column contact">
             <h2>Contact Us</h2>
             <p><FaEnvelope className="icon" /> 
-            info@irisaerial.in<br>
-
-            </br>
+            info@irisaerial.in<br />
             global@irisaerial.in
             </p>
-          <br></br>
+          <br />
             <p><FaPhone className="icon" />+91 9599115441</p>
           </div>
 
@@ -86,17 +87,16 @@ const Footer = () => {
           <div className="footer-column follow-us">
             <h2>Follow Us</h2>
             <div className="social-icons">
-              <a href="https://www.youtube.com/channel/UC67VnwwK-1c17aKdLPc9Y8Q" target="_blank" rel="noopener noreferrer"><FaYoutube className="icon facebook" /></a>
-              <a href="https://www.linkedin.com/company/iris-aerial-innovations-pvt-ltd/" target="_blank" rel="noopener noreferrer"><FaLinkedin className="icon linkedin" /></a>
-              <a href="https://www.instagram.com/irisaerial.in?igsh=MTE3ZmUwbnIxOXNrbA==" target="_blank" rel="noopener noreferrer"><FaInstagram className="icon twitter" /></a>
+              <a href="https://www.youtube.com/channel/UC67VnwwK-1c17aKdLPc9Y8Q" target="_blank" rel="noopener noreferrer" className="youtube"><FaYoutube /></a>
+              <a href="https://www.linkedin.com/company/iris-aerial-innovations-pvt-ltd/" target="_blank" rel="noopener noreferrer" className="linkedin"><FaLinkedin /></a>
+              <a href="https://www.instagram.com/irisaerial.in?igsh=MTE3ZmUwbnIxOXNrbA==" target="_blank" rel="noopener noreferrer" className="instagram"><FaInstagram /></a>
             </div>
           </div>
         </div>
 
         <br />
-        <hr />
+        <hr className="divider" />
 
-        {/* Copyright */}
         <div className="copyright">
           <p>© 2024 Iris Arial Innovations. All rights reserved.</p>
         </div>

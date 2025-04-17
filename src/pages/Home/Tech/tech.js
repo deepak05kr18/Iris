@@ -39,7 +39,7 @@ const sectionData = [
   },
   {
     image: img6,
-    title: 'Hydrology',
+    title: 'Hydrography/Hydrology',
     description: 'Hydrographic surveys, mapping underwater features and depths for navigation, construction, and environmental monitoring. We ensure accurate data collection for safe maritime operations, coastal development, and water resource management.'
   }
 ];

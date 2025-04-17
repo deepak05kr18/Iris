@@ -5,7 +5,7 @@ import img2 from "../../../components/Images/cards/Photogrammetry.webp"
 import img3 from "../../../components/Images/cards/Avsm.webp"
 import img4 from "../../../components/Images/cards/Sattelite.webp"
 import img5 from "../../../components/Images/cards/Hydrology.webp"
-import img6 from "../../../components/Images/cards/DGPS.webp"
+import img6 from "../../../components/Images/cards/dgps.jpeg"
 
 const Tech = () => {
   const containers = [
@@ -40,7 +40,7 @@ const Tech = () => {
       imgPosition: "right",
     },
     {
-      heading: "Hydrology",
+      heading: "Hydrography/Hydrology",
       content: "Hydrology surveys are crucial for understanding the underwater landscape, facilitating safe navigation, and supporting construction and environmental monitoring in aquatic environments. These surveys focus on mapping the depths and features of water bodies to ensure the safe operation of maritime activities, including shipping and navigation. Hydrological mapping is also instrumental in coastal development and water resource management, offering detailed insights into water flow patterns, sediment movement, and underwater obstacles. With cutting-edge technology, hydrographic data collection is executed with pinpoint accuracy, ensuring the safety of maritime operations and supporting informed decision-making in environmental management, infrastructure development, and natural resource conservation.",
       imgSrc: img5,
       imgPosition: "left",

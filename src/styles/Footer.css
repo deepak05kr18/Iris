@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 .footer {
-  background-color: #47cdf5;
-  color: #000000;
-  padding: 30px 20px;
+  background-color: #000000;
+  color: #47cdf5;
+  padding: 40px 20px 20px;
   font-family: 'Poppins', sans-serif;
   text-align: center;
 }
@@ -19,94 +19,154 @@
   flex-wrap: wrap;
   justify-content: space-between;
   text-align: left;
+  gap: 20px;
 }
 
 .footer-column {
   flex: 1;
   min-width: 180px;
-  margin: 10px;
+  margin-bottom: 20px;
 }
 
 .footer-column h2 {
   font-size: 18px;
-  margin-bottom: 10px;
-  color: #000000;
+  margin-bottom: 15px;
+  color: #47cdf5;
+  font-weight: 600;
 }
 
 .footer-column ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .footer-column ul li {
-  margin: 5px 0;
+  margin: 8px 0;
+  line-height: 1.4;
 }
 
 .footer-column ul li a {
-  color: #000000;
+  color: #47cdf5;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: 400;
 }
 
 .footer-column ul li a:hover {
   color: #ffffff;
+  padding-left: 5px;
 }
 
 /* Company Logo */
 .company {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.company img {
+  max-width: 180px;
+  height: auto;
+  margin-bottom: 15px;
 }
 
 /* Contact & Follow Us Section */
 .contact p, 
-.locations p, 
-.follow-us .social-icons {
+.locations p {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
-  font-size: 16px;
+  font-size: 15px;
+  color: #47cdf5;
+  margin: 10px 0;
+  line-height: 1.5;
 }
 
 .icon {
-  font-size: 22px;
-  color: #000000;
+  font-size: 18px;
+  color: #47cdf5;
+  margin-top: 2px;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background-color: rgba(71, 205, 245, 0.3);
+  margin: 10px 0;
+}
+
+/* Social Icons */
+.follow-us .social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
 }
 
 .follow-us .social-icons a {
-  font-size: 28px;
-  color: #ffffff;
-  margin: 0 10px;
-  transition: transform 0.3s ease, color 0.3s ease;
+  font-size: 22px;
+  color: #47cdf5;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  padding: 8px;
+  border-radius: 50%;
 }
 
-.follow-us .social-icons a:hover {
-  color: #f8b400;
+.follow-us .social-icons a.youtube:hover {
+  color: #ff0000;
   transform: scale(1.2);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+.follow-us .social-icons a.linkedin:hover {
+  color: #0077b5;
+  transform: scale(1.2);
+  box-shadow: 0 0 15px rgba(0, 119, 181, 0.5);
+}
+
+.follow-us .social-icons a.instagram:hover {
+  color: #e1306c;
+  transform: scale(1.2);
+  box-shadow: 0 0 15px rgba(225, 48, 108, 0.5);
 }
 
 /* Copyright */
 .copyright {
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: 14px;
-  color: #000000;
+  color: #47cdf5;
+  opacity: 0.8;
 }
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .footer-column {
+    min-width: 150px;
+  }
+}
+
 @media (max-width: 768px) {
   .footer-row {
     flex-direction: column;
-    text-align: center;
+    gap: 30px;
   }
 
   .footer-column {
-    flex: unset;
-    width: 100%;
     text-align: center;
+    align-items: center;
+  }
+
+  .company {
+    align-items: center;
   }
 
   .contact p, 
-  .locations p, 
+  .locations p {
+    justify-content: center;
+    text-align: center;
+  }
+
   .follow-us .social-icons {
     justify-content: center;
   }
@@ -114,24 +174,84 @@
 
 @media (max-width: 480px) {
   .footer {
-    padding: 20px 10px;
+    padding: 30px 15px;
   }
 
   .footer-column h2 {
-    font-size: 16px;
+    font-size: 17px;
   }
 
-  .footer-column ul li {
-    margin: 3px 0;
+  .footer-column ul li a {
+    font-size: 14px;
   }
 
-  .icon {
-    font-size: 18px;
+  .contact p, 
+  .locations p {
+    font-size: 14px;
   }
 
   .follow-us .social-icons a {
+    font-size: 20px;
+    padding: 6px;
+  }
+}
+/* Add these styles to your Footer.css */
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.iris-text {
+  font-size: 28px;
+  font-weight: 700;
+  color: #47cdf5;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+}
+
+.aerial-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+  .logo-container {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .iris-text {
     font-size: 24px;
-    margin: 0 5px;
+  }
+  
+  .aerial-text {
+    font-size: 14px;
   }
 }
 
+@media (max-width: 480px) {
+  .iris-text {
+    font-size: 22px;
+  }
+  
+  .aerial-text {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+}

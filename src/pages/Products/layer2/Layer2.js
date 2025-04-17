@@ -2,7 +2,6 @@ import React from 'react';
 import './Layer2.css';
 import img1 from '../../../components/Images/cards/rail.jpg';
 import img2 from '../../../components/Images/cards/road.webp';
-import img3 from '../../../components/Images/cards/drones.jpg';
 
 const Layer2 = () => {
   const sections = [
@@ -19,13 +18,6 @@ const Layer2 = () => {
       heading: 'Smart Road Monitor',
       content: 'Smart Road Monitor utilizes GIS-integrated drone technology for efficient road inspection, mapping, and maintenance. It enables real-time damage detection, traffic analysis, and predictive maintenance, reducing costs and manual efforts. AI-driven analytics enhance safety, planning, and infrastructure management for smarter road networks.',
       reverse: true,
-    },
-    {
-      id: 3,
-      image: img3,
-      heading: 'Drones',
-      content: 'Smart Drones revolutionize surveying, mapping, and monitoring across industries. They enable real-time data collection, terrain analysis, and predictive maintenance, reducing costs and human effort. AI-driven insights enhance efficiency, accuracy, and decision-making in infrastructure, agriculture, and disaster management.',
-      reverse: false,
     },
   ];
 

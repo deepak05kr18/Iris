@@ -4,121 +4,204 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
-}
-
-/* Adjust height of the hero section if needed */
-.hero-slide {
+  }
+  
+  /* Slide Styles */
+  .hero-slide {
     position: absolute;
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center center;
-    opacity: 0.7;
-    visibility: hidden;
-}
-.hero-slide::before {
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  }
+  
+  .hero-slide::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Dark overlay with 40% opacity */
-}
-
-.hero-slide.active {
-    visibility: visible;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Slide Transition Effects */
+  .hero-slide.active {
+    transform: translateX(0);
     opacity: 1;
-}
-
-/* Hero Content */
-.hero-content {
+    z-index: 1;
+  }
+  
+  .hero-slide.next.right {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 2;
+  }
+  
+  .hero-slide.prev.right {
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: 0;
+  }
+  
+  .hero-slide.next.left {
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: 2;
+  }
+  
+  .hero-slide.prev.left {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 0;
+  }
+  
+  /* Hero Content */
+  .hero-content {
     position: absolute;
     top: 50%;
-    left: 5%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
-    max-width: 90%;
     text-align: center;
-}
-
-.hero-content h1 {
-    font-size: 70px;
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.4s forwards;
+  }
+  
+  .hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
     margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 24px;
-}
-
-/* Navigation Arrows */
-.nav-arrow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-content p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Navigation Arrows */
+  .nav-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 50px;
-    background: none;
+    background: rgba(255, 255, 255, 0.2);
     border: none;
     color: white;
     cursor: pointer;
     z-index: 10;
-}
-
-.nav-arrow.right {
-    right: 10px;
-}
-
-.nav-arrow.left {
-    left: 10px;
-}
-
-/* Additional Content Styles */
-.content {
-    padding: 20px;
-    background-color: #f4f4f4;
-}
-
-.content p {
-    font-size: 22px;
-    line-height: 1.6;
-}
-
-/* Responsive Design for Mobile Screens */
-@media screen and (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-arrow:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  .nav-arrow.right {
+    right: 30px;
+  }
+  
+  .nav-arrow.left {
+    left: 30px;
+  }
+  
+  .arrow-icon {
+    font-size: 1.5rem;
+  }
+  
+  /* Slide Indicators */
+  .slide-indicators {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+  }
+  
+  .indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .indicator.active {
+    background: white;
+    transform: scale(1.2);
+  }
+  
+  .indicator:hover {
+    background: white;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate(-50%, calc(-50% + 20px));
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
     .hero {
-        height: 80vh; /* Reduce height for better fit */
+      height: 80vh;
     }
-
-    .hero-content {
-        left: 50%;
-        transform: translate(-50%, -50%);
-        max-width: 90%;
-        text-align: center;
-    }
-
-    .hero-content h1 {
-        font-size: 40px; /* Decrease font size */
-        margin-bottom: 10px;
-    }
-
-    .hero-content p {
-        font-size: 18px;
-    }
-
+  
     .nav-arrow {
-        font-size: 30px; /* Decrease arrow size */
+      width: 40px;
+      height: 40px;
     }
-
+  
+    .arrow-icon {
+      font-size: 1.2rem;
+    }
+  
     .nav-arrow.right {
-        right: 5px;
+      right: 15px;
     }
-
+  
     .nav-arrow.left {
-        left: 5px;
+      left: 15px;
     }
-
-    .content p {
-        font-size: 18px;
-        line-height: 1.4;
+  
+    .slide-indicators {
+      bottom: 20px;
     }
-}
+  }
+  
+  @media screen and (max-width: 480px) {
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-content p {
+      font-size: 1rem;
+    }
+  
+    .nav-arrow {
+      width: 35px;
+      height: 35px;
+    }
+  }

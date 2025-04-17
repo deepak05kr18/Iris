@@ -1,27 +1,52 @@
-import React, { useState } from "react";
-import "./hero.css";  // Importing CSS for styling
+import React, { useState, useEffect, useCallback } from "react";
+import "./hero.css";
 import img1 from "../../../components/Images/Background/Satellite.jpg";
 import img2 from "../../../components/Images/Background/hero1.webp";
 import img3 from "../../../components/Images/Background/hero2.webp";
-
-
-
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const HeroBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [transitionDirection, setTransitionDirection] = useState("right");
 
   const slides = [
-    { image: img2, title: "We’re so glad you're here", description: "Our mission is to provide you with top-notch geospatial solutions and modern surveying services with state-of-the-art technologies." },
-    { image: img1, title: "Your challenge is our passion", description: "We strive to deliver results that exceed your expectations." },
-    { image: img3, title: "Innovative Solutions", description: "Empowering businesses with cutting-edge technologies." }
+    { 
+      image: img2, 
+      title: "We're so glad you're here", 
+      description: "Our mission is to provide you with top-notch geospatial solutions and modern surveying services with state-of-the-art technologies." 
+    },
+    { 
+      image: img1, 
+      title: "Your challenge is our passion", 
+      description: "We strive to deliver results that exceed your expectations." 
+    },
+    { 
+      image: img3, 
+      title: "Innovative Solutions", 
+      description: "Empowering businesses with cutting-edge technologies." 
+    }
   ];
 
-  const goToNextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length); // Move to next slide, and loop to the first
-  };
+  // Memoize the next slide function to prevent unnecessary recreations
+  const goToNextSlide = useCallback(() => {
+    setTransitionDirection("right");
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+  }, [slides.length]);
 
-  const goToPreviousSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length); // Move to previous slide, and loop back to the last one
+  const goToPreviousSlide = useCallback(() => {
+    setTransitionDirection("left");
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
+  }, [slides.length]);
+
+  // Auto slide functionality
+  useEffect(() => {
+    const interval = setInterval(goToNextSlide, 10000);
+    return () => clearInterval(interval);
+  }, [goToNextSlide]); // Fixed the dependency warning by including goToNextSlide
+
+  const goToSlide = (index) => {
+    setTransitionDirection(index > currentSlide ? "right" : "left");
+    setCurrentSlide(index);
   };
 
   return (
@@ -30,7 +55,11 @@ const HeroBanner = () => {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`hero-slide ${index === currentSlide ? "active" : ""}`}
+          className={`hero-slide ${
+            index === currentSlide ? "active" : 
+            index === (currentSlide + 1) % slides.length ? "next" : 
+            index === (currentSlide - 1 + slides.length) % slides.length ? "prev" : ""
+          } ${transitionDirection}`}
           style={{ backgroundImage: `url(${slide.image})` }}
         >
           <div className="hero-content">
@@ -42,15 +71,22 @@ const HeroBanner = () => {
 
       {/* Navigation Arrows */}
       <button className="nav-arrow right" onClick={goToNextSlide}>
-        &gt;
+        <FaChevronRight className="arrow-icon" />
+      </button>
+      <button className="nav-arrow left" onClick={goToPreviousSlide}>
+        <FaChevronLeft className="arrow-icon" />
       </button>
 
-      {/* Left Arrow (Appears when right arrow is clicked) */}
-      {currentSlide > 0 && (
-        <button className="nav-arrow left" onClick={goToPreviousSlide}>
-          &lt;
-        </button>
-      )}
+      {/* Slide Indicators */}
+      <div className="slide-indicators">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            className={`indicator ${index === currentSlide ? "active" : ""}`}
+            onClick={() => goToSlide(index)}
+          />
+        ))}
+      </div>
     </section>
   );
 };

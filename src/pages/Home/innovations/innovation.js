@@ -1,16 +1,29 @@
 import React from 'react';
 import './ai.css';
+import img1 from "../../../components/Images/cards/s1.png";
+import img2 from "../../../components/Images/cards/s2.png";
 
 const AISection = () => {
   return (
     <div className="ai-section">
       <div className="ai-overlay">
-        <div className="ai-content">
-          <h1>AI and Inovations</h1>
-          <p>
-          AVSM: Aerial Video Smart Monitor is an AI-driven solution revolutionizing GIS surveys with state-of-the-art object detection and real-time data processing. Seamlessly integrating into existing workflows, AVSM enhances drone surveys by converting high-resolution aerial video and imagery into actionable insights with unmatched precision. It delivers accurate geospatial data crucial for infrastructure planning, environmental monitoring, and asset management. By capturing and analyzing every detail, AVSM empowers users to make confident, informed decisions. Offering improved efficiency, exceptional clarity, and unparalleled detail, AVSM provides a competitive edge, setting a new standard in geospatial intelligence and transforming the future of surveying projects.
-          </p>
-          <button className="explore-button">Explore</button>
+        <div className="ai-content-container">
+          <div className="ai-content">
+            <h1>AI and Innovations</h1>
+            <p>
+              Aerial Video Smart Monitor (AVSM), a highly sophisticated Artificial Intelligence(AI) object identification model locates desired elements such as Infrastructure assets, encroachments etc. with extreme precision, syncing with your workflow with ease, we deliver the next wave of geospatial brilliance.
+            </p>
+            <button className="explore-button">Explore</button>
+          </div>
+          
+          <div className="image-container">
+            <div className="image-wrapper">
+              <img src={img1} alt="AI Innovation 1" className="content-image" />
+            </div>
+            <div className="image-wrapper">
+              <img src={img2} alt="AI Innovation 2" className="content-image" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

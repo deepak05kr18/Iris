@@ -8,7 +8,6 @@ import clientLogo3 from "../../../components/Images/Logo/DMIA.jpg";
 import clientLogo4 from "../../../components/Images/Logo/East Rail.jpg";
 import clientLogo5 from "../../../components/Images/Logo/NR.jpg";
 import clientLogo6 from "../../../components/Images/Logo/Royal.jpg";
-import clientLogo7 from "../../../components/Images/Logo/s2f.jpg";
 import clientLogo8 from "../../../components/Images/Logo/SRK.png";
 import clientLogo9 from "../../../components/Images/Logo/Vedanta.jpg";
 
@@ -20,7 +19,6 @@ const ClientLogos = () => {
     { id: 4, src: clientLogo4, alt: "Client 4"  },
     { id: 5, src: clientLogo5, alt: "Client 5"  },
     { id: 6, src: clientLogo6, alt: "Client 6"  },
-    { id: 7, src: clientLogo7, alt: "Client 7"  },
     { id: 8, src: clientLogo8, alt: "Client 8"  },
     { id: 9, src: clientLogo9, alt: "Client 9"  },
   ];
