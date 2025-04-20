@@ -71,23 +71,25 @@ const App = () => {
                 className={`ser-item ${index === 0 ? "ser-main" : ""}`}
                 style={{ backgroundImage: `url(${item.img})` }}
               >
-                {index === 1 && (
+                {index === 1 ? (
                   <div className="ser-content">
                     <div className="ser-name">{item.name}</div>
                     <div className="ser-des">
                       {item.des}
                     </div>
                   </div>
+                ) : (
+                  index !== 0 && <div className="ser-card-title">{item.name}</div>
                 )}
               </div>
             ))}
           </div>
           <div className="ser-button">
             <button className="ser-prev" onClick={handlePrev}>
-              <FaArrowLeft className="icon" />
+              <FaArrowLeft className="icon black-icon" />
             </button>
             <button className="ser-next" onClick={handleNext}>
-              <FaArrowRight className="icon" />
+              <FaArrowRight className="icon black-icon" />
             </button>
           </div>
         </>

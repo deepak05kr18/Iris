@@ -1,22 +1,25 @@
 import React from "react";
 import "./main.css";
+import vid from "../../../components/Images/Team/v.mp4"
 
-const Main = () => {
-    return (
-        <section className="main-section">
-            <h2>Iris Aerial Innovations: Pioneering the Future with Geospatial Excellence</h2>
-            <p>
-                A modern survey & engineering consultancy organization having expertise in various survey technology
-                and engineering design for various sectors including infrastructure, railways, roads, mining, agriculture, telecom, energy, etc. 
-                We are highly professional and one of the most rated and 
-                recommended survey and engineering consultancy organizations in India.
-                <br /><strong>“Once a customer, always a partner!"</strong>
-            </p>
-            <div className="drone drone-1"></div>
-            <div className="drone drone-2"></div>
-            <div className="drone drone-3"></div>
-        </section>
-    );
+const HeroSection = () => {
+  return (
+    <div className="hero-container">
+      <video autoPlay loop muted className="background-video">
+        <source src={vid} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Optional Overlay */}
+      <div className="overlay"></div>
+
+      {/* Text Content */}
+      <div className="hero-text">
+        <h1>Iris Aerial Innovations: Pioneering the Future with Geospatial Excellence</h1>
+        <p>A modern survey & engineering consultancy organization having expertise in various survey technology and engineering design for various sectors including infrastructure, railways, roads, mining, agriculture, telecom, energy, etc. We are highly professional and one of the most rated and recommended survey and engineering consultancy organizations in India.</p>
+      </div>
+    </div>
+  );
 };
 
-export default Main;
+export default HeroSection;

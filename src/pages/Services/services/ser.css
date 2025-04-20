@@ -71,8 +71,26 @@
   overflow: hidden;
 }
 
+.ser-card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
 .ser-slide .ser-item:nth-child(2) .ser-content {
   display: block;
+}
+
+.ser-slide .ser-item:nth-child(2) .ser-card-title {
+  display: none;
 }
 
 .ser-content .ser-name {
@@ -93,8 +111,6 @@
   transition: max-height 0.5s ease;
 }
 
-
-
 .ser-content button {
   padding: 10px 20px;
   border: none;
@@ -102,7 +118,7 @@
   opacity: 0;
   background: rgb(65, 217, 241);
   backdrop-filter: blur(10px);
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: bold;
   border-radius: 10px;
   animation: ser-animate 1s ease-in-out 0.6s 1 forwards;
@@ -123,6 +139,11 @@
   cursor: pointer;
   margin: 0 5px;
   border: 1px solid #000;
+  background: white;
+}
+
+.black-icon {
+  color: black !important;
 }
 
 @keyframes ser-animate {
@@ -174,7 +195,7 @@
     font-size: 16px;
     line-height: 1.5;
     color: #555;
-    margin-bottom: 0; /* Removed margin since no button */
+    margin-bottom: 0;
   }
   
   .mobile-buttons {
@@ -220,11 +241,11 @@
 }
 
 .mobile-prev {
-  margin-right: auto; /* Pushes to left */
+  margin-right: auto;
 }
 
 .mobile-next {
-  margin-left: auto; /* Pushes to right */
+  margin-left: auto;
 }
 
 /* Desktop Buttons */
@@ -242,25 +263,23 @@
   width: 40px;
   height: 35px;
   border-radius: 8px;
-  background: rgba(69, 230, 242, 0.998);
-  color: white;
-  border: none;
+  background: white;
+  color: black;
+  border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .ser-prev {
-  margin-right: auto; /* Pushes to left */
+  margin-right: auto;
 }
 
 .ser-next {
-  margin-left: auto; /* Pushes to right */
+  margin-left: auto;
 }
 
 /* Icon Styles */
 .icon {
   font-size: 1.2em;
 }
-
-/* Rest of your existing CSS remains unchanged */

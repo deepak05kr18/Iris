@@ -1,208 +1,47 @@
-/* Main Section Styling */
-.main-section {
+.hero-container {
     position: relative;
-    padding: 90px 100px;
-    text-align: center;
-    color: rgb(12, 12, 12);
-    background: none; /* Background is handled in the pseudo-element */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* Ensures content stacks vertically */
-    min-height: 400px; /* Ensure minimum height for visibility */
-}
-
-.main-section::before {
-    content: '';
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .background-video {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('../../../components/Images/Background/mainbg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.5; /* Adjust for desired translucency */
-    z-index: -1; /* Places the background behind the content */
-}
-
-/* Content Styling */
-.main-section h2,
-.main-section p {
-    position: relative; /* Ensure text stays on top of the background */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1; /* dim the video */
     z-index: 1;
-    text-align: center;
-}
-
-.main-section h2 {
-    font-size: 3.5rem; /* Increased font size */
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    color: #000000; /* White text for better contrast */
-}
-
-.main-section p {
-    font-size: 1.5rem; /* Increased font size */
-    line-height: 1.8;
-    max-width: 900px; /* Slightly larger width for content */
-    margin: 0 auto;
-    color: #000000; /* White text for consistency */
-}
-
-/* Common Drone Styling */
-.drone {
+  }
+  
+  .overlay {
     position: absolute;
-    width: 120px; /* Adjust size as needed */
-    height: 120px; /* Adjust size as needed */
-    background: url('../../../components/Images/Badges/camera-drone.png'); /* Replace with your drone image path */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.7; /* Low opacity for the drones */
-    z-index: -1; /* Place behind text */
-}
-
-/* Individual Animations for Each Drone */
-.drone-1 {
-    animation: fly1 10s infinite alternate ease-in-out;
-}
-
-.drone-2 {
-    animation: fly2 12s infinite alternate ease-in-out;
-}
-
-.drone-3 {
-    animation: fly3 14s infinite alternate ease-in-out;
-}
-
-/* Animation for Drone 1 */
-@keyframes fly1 {
-    0% {
-        top: 10%;
-        left: 15%;
-        transform: translate(-15%, -10%) rotate(0deg);
-    }
-    25% {
-        top: 30%;
-        left: 40%;
-        transform: translate(-40%, -30%) rotate(15deg);
-    }
-    50% {
-        top: 60%;
-        left: 20%;
-        transform: translate(-20%, -60%) rotate(-15deg);
-    }
-    75% {
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -40%) rotate(10deg);
-    }
-    100% {
-        top: 20%;
-        left: 70%;
-        transform: translate(-70%, -20%) rotate(-10deg);
-    }
-}
-
-/* Animation for Drone 2 */
-@keyframes fly2 {
-    0% {
-        top: 15%;
-        left: 20%;
-        transform: translate(-20%, -15%) rotate(0deg);
-    }
-    25% {
-        top: 35%;
-        left: 60%;
-        transform: translate(-60%, -35%) rotate(-10deg);
-    }
-    50% {
-        top: 50%;
-        left: 40%;
-        transform: translate(-40%, -50%) rotate(20deg);
-    }
-    75% {
-        top: 30%;
-        left: 80%;
-        transform: translate(-80%, -30%) rotate(5deg);
-    }
-    100% {
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%, -10%) rotate(-20deg);
-    }
-}
-
-/* Animation for Drone 3 */
-@keyframes fly3 {
-    0% {
-        top: 20%;
-        left: 10%;
-        transform: translate(-10%, -20%) rotate(0deg);
-    }
-    25% {
-        top: 40%;
-        left: 70%;
-        transform: translate(-70%, -40%) rotate(20deg);
-    }
-    50% {
-        top: 60%;
-        left: 30%;
-        transform: translate(-30%, -60%) rotate(-20deg);
-    }
-    75% {
-        top: 50%;
-        left: 90%;
-        transform: translate(-90%, -50%) rotate(15deg);
-    }
-    100% {
-        top: 25%;
-        left: 40%;
-        transform: translate(-40%, -25%) rotate(-10deg);
-    }
-}
-/* Responsive Design for Mobile Screens (Max Width: 480px) */
-@media screen and (max-width: 768px) {
-    /* Adjusting the main section padding and layout */
-    .main-section {
-        padding: 50px 20px; /* Reduced padding for smaller screens */
-    }
-
-    .main-section h2 {
-        font-size: 2rem; /* Decreased font size for better readability */
-        margin-bottom: 20px;
-    }
-
-    .main-section p {
-        font-size: 1rem; /* Adjusted font size */
-        line-height: 1.5;
-        max-width: 100%; /* Ensure full width usage */
-    }
-
-    /* Drone Styling Adjustments */
-    .drone {
-        width: 80px; /* Reduce drone size */
-        height: 80px;
-        opacity: 0.5; /* Reduce opacity to prevent distraction */
-    }
-
-    /* Modify drone animations for smaller screens */
-    @keyframes fly1 {
-        0% { top: 5%; left: 10%; transform: rotate(0deg); }
-        50% { top: 40%; left: 50%; transform: rotate(10deg); }
-        100% { top: 10%; left: 80%; transform: rotate(-10deg); }
-    }
-
-    @keyframes fly2 {
-        0% { top: 10%; left: 15%; transform: rotate(0deg); }
-        50% { top: 45%; left: 60%; transform: rotate(-10deg); }
-        100% { top: 15%; left: 50%; transform: rotate(15deg); }
-    }
-
-    @keyframes fly3 {
-        0% { top: 15%; left: 5%; transform: rotate(0deg); }
-        50% { top: 50%; left: 70%; transform: rotate(15deg); }
-        100% { top: 20%; left: 40%; transform: rotate(-10deg); }
-    }
-}
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* optional dark overlay */
+    z-index: 2;
+  }
+  
+  .hero-text {
+    position: relative;
+    z-index: 3;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 20px;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.5rem;
+  }
+  

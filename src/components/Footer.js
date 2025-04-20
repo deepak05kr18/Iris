@@ -16,7 +16,7 @@ const Footer = () => {
               <img src={img1} alt="Iris Aerial Innovations Logo"/>
               <div className="logo-text">
                 <span className="iris-text">IRIS</span>
-                <span className="aerial-text">Aerial Innovations</span>
+                <span className="aerial-text">Aerial Innovations Pvt Ltd</span>
               </div>
             </div>
           </div>
@@ -98,7 +98,7 @@ const Footer = () => {
         <hr className="divider" />
 
         <div className="copyright">
-          <p>© 2024 Iris Arial Innovations. All rights reserved.</p>
+          <p>© 2025 Iris Arial Innovations. All rights reserved.</p>
         </div>
       </div>
     </footer>

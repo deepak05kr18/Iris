@@ -7,59 +7,49 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const HeroBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [transitionDirection, setTransitionDirection] = useState("right");
 
   const slides = [
-    { 
-      image: img2, 
-      title: "We're so glad you're here", 
-      description: "Our mission is to provide you with top-notch geospatial solutions and modern surveying services with state-of-the-art technologies." 
+    {
+      image: img2,
+      title: "Mapping the Future with Precision",
+      description:
+        "Our mission is to provide you with top-notch geospatial solutions and modern surveying services with state-of-the-art technologies.",
     },
-    { 
-      image: img1, 
-      title: "Your challenge is our passion", 
-      description: "We strive to deliver results that exceed your expectations." 
+    {
+      image: img1,
+      title: "Your challenge is our passion",
+      description: "We strive to deliver results that exceed your expectations.",
     },
-    { 
-      image: img3, 
-      title: "Innovative Solutions", 
-      description: "Empowering businesses with cutting-edge technologies." 
-    }
+    {
+      image: img3,
+      title: "Innovative Solutions",
+      description: "Empowering businesses with cutting-edge technologies.",
+    },
   ];
 
-  // Memoize the next slide function to prevent unnecessary recreations
   const goToNextSlide = useCallback(() => {
-    setTransitionDirection("right");
     setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
   }, [slides.length]);
 
   const goToPreviousSlide = useCallback(() => {
-    setTransitionDirection("left");
     setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
   }, [slides.length]);
 
-  // Auto slide functionality
   useEffect(() => {
-    const interval = setInterval(goToNextSlide, 10000);
+    const interval = setInterval(goToNextSlide, 4000);
     return () => clearInterval(interval);
-  }, [goToNextSlide]); // Fixed the dependency warning by including goToNextSlide
+  }, [goToNextSlide]);
 
   const goToSlide = (index) => {
-    setTransitionDirection(index > currentSlide ? "right" : "left");
     setCurrentSlide(index);
   };
 
   return (
     <section className="hero">
-      {/* Slide Images */}
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`hero-slide ${
-            index === currentSlide ? "active" : 
-            index === (currentSlide + 1) % slides.length ? "next" : 
-            index === (currentSlide - 1 + slides.length) % slides.length ? "prev" : ""
-          } ${transitionDirection}`}
+          className={`hero-slide ${index === currentSlide ? "active" : ""}`}
           style={{ backgroundImage: `url(${slide.image})` }}
         >
           <div className="hero-content">
@@ -69,7 +59,6 @@ const HeroBanner = () => {
         </div>
       ))}
 
-      {/* Navigation Arrows */}
       <button className="nav-arrow right" onClick={goToNextSlide}>
         <FaChevronRight className="arrow-icon" />
       </button>
@@ -77,7 +66,6 @@ const HeroBanner = () => {
         <FaChevronLeft className="arrow-icon" />
       </button>
 
-      {/* Slide Indicators */}
       <div className="slide-indicators">
         {slides.map((_, index) => (
           <button

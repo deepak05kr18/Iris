@@ -1,12 +1,11 @@
-/* AI Section Styling */
 .ai-section {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-image: url('../../../components/Images/Background/Ai\ bg.jpeg');
+  background-image: url('../../../components/Images/Background/Ai bg.jpeg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  /* Removed background-attachment: fixed */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,6 +89,12 @@
 }
 
 /* Button Styles */
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
 .explore-button {
   padding: 0.8rem 1.8rem;
   font-size: clamp(0.9rem, 1.3vw, 1.1rem);
@@ -101,29 +106,10 @@
   transition: all 0.3s ease;
 }
 
-.image-button {
-  padding: 0.6rem 1.5rem;
-  font-size: clamp(0.8rem, 1.1vw, 1rem);
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.explore-button:hover,
-.image-button:hover {
+.explore-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.explore-button:hover {
   background-color: #0056b3;
-}
-
-.image-button:hover {
-  background-color: #218838;
 }
 
 /* Responsive Adjustments */
@@ -131,15 +117,15 @@
   .ai-content-container {
     gap: 1.5rem;
   }
-  
+
   .ai-content {
     gap: 1rem;
   }
-  
+
   .image-container {
     gap: 1rem;
   }
-  
+
   .content-image {
     max-height: 200px;
   }
@@ -149,25 +135,24 @@
   .ai-section {
     padding: 15px;
   }
-  
+
   .ai-content h1 {
     font-size: 1.8rem;
   }
-  
+
   .ai-content p {
     font-size: 1rem;
   }
-  
+
   .image-wrapper {
     min-width: 10%;
   }
-  
+
   .content-image {
     max-height: 130px;
   }
-  
-  .explore-button,
-  .image-button {
+
+  .explore-button {
     padding: 0.6rem 1.2rem;
   }
 }
