@@ -1,47 +1,96 @@
 .hero-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  .background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 1; /* dim the video */
-    z-index: 1;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* optional dark overlay */
-    z-index: 2;
-  }
-  
-  .hero-text {
-    position: relative;
-    z-index: 3;
-    color: white;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 0 20px;
-  }
-  
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 3;
+  color: white;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
   .hero-text h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
   }
   
   .hero-text p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;
   }
   
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text {
+    padding: 0 15px;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-text h1 {
+    font-size: 1.3rem;
+  }
+  
+  .hero-text p {
+    font-size: 0.8rem;
+  }
+}

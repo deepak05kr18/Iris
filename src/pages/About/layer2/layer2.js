@@ -3,10 +3,7 @@ import "./irisSection.css";
 
 const IrisSection = () => {
     const content = `
-        Iris, a Govt. of India-recognized startup under Startup India, is transforming the way industries approach surveying, mapping, and monitoring. We specialize in delivering cutting-edge solutions using drone technology, advanced AI-driven systems, and modern surveying techniques to cater to sectors like agriculture, construction, real estate, and environmental monitoring.
- Our expertise spans precise topographical surveys, LIDAR mapping, GIS, hydrology surveys, and satellite photogrammetry. At the heart of our innovation lies AVSM (Aerial Video Smart Monitor) an AI-powered tool that ensures exceptional accuracy and efficiency in aerial monitoring and GIS surveys. This system empowers clients with actionable insights for better decision-making and optimized operations.
-Iris is committed to providing state-of-the-art services that blend technical precision with practical solutions, ensuring timely and cost-effective project outcomes. Our drone-based surveys and real-time monitoring techniques set new standards for accuracy and reliability, making data collection and analysis seamless and efficient.
-As a recognized startup, we take pride in pushing the boundaries of innovation in drone technology. With a focus on excellence and sustainability, Iris continues to redefine surveying and mapping, driving progress in industries and setting new benchmarks in the world of modern geospatial solutions.
+       Iris, a Govt. of India-recognized Startup India venture, is revolutionizing surveying, mapping, and monitoring through drone technology, AI-driven systems, and modern techniques. Serving sectors like agriculture, construction, real estate, and environmental monitoring, we specialize in topographical surveys, LIDAR mapping, GIS, hydrology, and satellite photogrammetry. Our AI-powered AVSM (Aerial Video Smart Monitor) ensures high-precision aerial monitoring and actionable insights. Committed to innovation, accuracy, and sustainability, Iris delivers cost-effective, real-time geospatial solutions. We set new standards in data collection and analysis, helping industries make better decisions and optimize operations through cutting-edge drone-based services.
     `;
 
     return (

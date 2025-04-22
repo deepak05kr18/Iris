@@ -7,7 +7,7 @@ import clientLogo3 from "../../../components/Images/Logo/CEG logo[1].png";
 import clientLogo4 from "../../../components/Images/Logo/CR-removebg-preview.png";
 import clientLogo5 from "../../../components/Images/Logo/DMIA-removebg-preview.png";
 import clientLogo6 from "../../../components/Images/Logo/East_Rail-removebg-preview.png";
-import clientLogo8 from "../../../components/Images/Logo/Manikaran Logo[1].png";
+import clientLogo8 from "../../../components/Images/Logo/ManikaranLogo1.webp";
 import clientLogo9 from "../../../components/Images/Logo/NR-removebg-preview.png";
 import clientLogo10 from "../../../components/Images/Logo/Royal-removebg-preview.png";
 import clientLogo11 from "../../../components/Images/Logo/Vedanta-removebg-preview.png";
@@ -28,23 +28,23 @@ const ClientLogos = () => {
     { id: 11, src: clientLogo11, alt: "Client 11" },
     { id: 12, src: clientLogo12, alt: "Client 12" },
     { id: 13, src: clientLogo13, alt: "Client 13" },
-
   ];
 
   const duplicatedClients = [...clients, ...clients];
 
   return (
     <div className="client-logos-container">
-      <h2 className="clients-heading">Our Clients</h2>
+      <h2 className="clients-heading">Clientele</h2>
       <div className="logos-scroll-container">
         <div className="logos-wrapper">
-          {duplicatedClients.map((client) => (
-            <img
-              key={client.id + Math.random()}
-              src={client.src}
-              alt={client.alt}
-              className="client-logo"
-            />
+          {duplicatedClients.map((client, index) => (
+            <div key={`${client.id}-${index}`} className="logo-container">
+              <img
+                src={client.src}
+                alt={client.alt}
+                className="client-logo"
+              />
+            </div>
           ))}
         </div>
         <div className="fade fade-left" />
