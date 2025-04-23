@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './tech.css';
+import './tech1.css';
 
 // Importing images
 import img1 from "../../../components/Images/cards/lidar.jpeg";
