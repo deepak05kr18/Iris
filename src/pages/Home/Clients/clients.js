@@ -2,7 +2,7 @@ import React from "react";
 import "./clients.css";
 
 import clientLogo1 from "../../../components/Images/Logo/Anand_Raj-removebg-preview.png";
-import clientLogo2 from "../../../components/Images/Logo/Arki Logo[1].png";
+import clientLogo2 from "../../../components/Images/Logo/arkitechno_cover.jpeg";
 import clientLogo3 from "../../../components/Images/Logo/CEG logo[1].png";
 import clientLogo4 from "../../../components/Images/Logo/CR-removebg-preview.png";
 import clientLogo5 from "../../../components/Images/Logo/DMIA-removebg-preview.png";

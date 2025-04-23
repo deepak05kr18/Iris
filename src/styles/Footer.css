@@ -5,7 +5,6 @@
   color: #ffffff;
   padding: 40px 20px 20px;
   font-family: 'Poppins', sans-serif;
-  text-align: center;
 }
 
 .footer-container {
@@ -57,21 +56,52 @@
   padding-left: 5px;
 }
 
-/* Company Logo */
+/* Logo & Company Name Styling */
 .company {
   display: flex;
+
+  align-items: center;
+  text-align: center;
+  padding-top: 0;
+}
+
+.logo-container {
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
 .company img {
-  max-width: 180px;
+  max-width: 100px;
   height: auto;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
-/* Contact & Follow Us Section */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.iris-text {
+  font-size: 28px;
+  font-weight: 700;
+  color: #47cdf5;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.aerial-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Contact & Locations */
 .contact p, 
 .locations p {
   display: flex;
@@ -87,13 +117,6 @@
   font-size: 18px;
   color: #47cdf5;
   margin-top: 2px;
-}
-
-.divider {
-  border: none;
-  height: 1px;
-  background-color: rgba(71, 205, 245, 0.3);
-  margin: 10px 0;
 }
 
 /* Social Icons */
@@ -130,15 +153,23 @@
   box-shadow: 0 0 15px rgba(225, 48, 108, 0.5);
 }
 
-/* Copyright */
+/* Dividers & Copyright */
+.divider {
+  border: none;
+  height: 1px;
+  background-color: rgba(71, 205, 245, 0.3);
+  margin: 10px 0;
+}
+
 .copyright {
   margin-top: 20px;
   font-size: 14px;
   color: #47cdf5;
   opacity: 0.8;
+  text-align: center;
 }
 
-/* Responsive Design */
+/* Responsive Adjustments */
 @media (max-width: 992px) {
   .footer-column {
     min-width: 150px;
@@ -156,10 +187,6 @@
     align-items: center;
   }
 
-  .company {
-    align-items: center;
-  }
-
   .contact p, 
   .locations p {
     justify-content: center;
@@ -168,6 +195,19 @@
 
   .follow-us .social-icons {
     justify-content: center;
+  }
+
+  /* Mobile logo adjustments */
+  .company img {
+    max-width: 80px;
+  }
+
+  .iris-text {
+    font-size: 24px;
+  }
+
+  .aerial-text {
+    font-size: 12px;
   }
 }
 
@@ -192,65 +232,5 @@
   .follow-us .social-icons a {
     font-size: 20px;
     padding: 6px;
-  }
-}
-/* Add these styles to your Footer.css */
-
-.logo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-}
-
-.iris-text {
-  font-size: 28px;
-  font-weight: 700;
-  color: #47cdf5;
-  letter-spacing: 1px;
-  line-height: 1;
-  text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
-}
-
-.aerial-text {
-  font-size: 16px;
-  font-weight: 600;
-  color: #ffffff;
-  letter-spacing: 2px;
-  line-height: 1.2;
-  text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* For mobile responsiveness */
-@media (max-width: 768px) {
-  .logo-container {
-    align-items: center;
-    text-align: center;
-  }
-  
-  .iris-text {
-    font-size: 24px;
-  }
-  
-  .aerial-text {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  .iris-text {
-    font-size: 22px;
-  }
-  
-  .aerial-text {
-    font-size: 12px;
-    letter-spacing: 1px;
   }
 }
