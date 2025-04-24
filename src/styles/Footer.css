@@ -212,25 +212,43 @@
 }
 
 @media (max-width: 480px) {
+  .company {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    display: flex;
+  }
+
+  .logo-container {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .company img {
+    max-width: 70px;
+    height: auto;
+    margin: 0 auto 10px;
+  }
+
+  .logo-text {
+    align-items: center;
+    text-align: center;
+    gap: 2px;
+  }
+
+  .iris-text {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .aerial-text {
+    font-size: 11px;
+    text-align: center;
+  }
+
   .footer {
-    padding: 30px 15px;
-  }
-
-  .footer-column h2 {
-    font-size: 17px;
-  }
-
-  .footer-column ul li a {
-    font-size: 14px;
-  }
-
-  .contact p, 
-  .locations p {
-    font-size: 14px;
-  }
-
-  .follow-us .social-icons a {
-    font-size: 20px;
-    padding: 6px;
+    overflow-x: hidden;
   }
 }
