@@ -82,9 +82,10 @@ const Contact = () => {
                   <i className="fas fa-clock"></i>
                 </div>
                 <div className="contact-info-text">
-                  <h2>Office Time</h2>
-                  <span>Mon - Fri 10:00 am - 6:00 pm</span>
-                </div>
+                  <h2>Contact Number</h2>
+                  <span><b>Domestic</b> : +91 9599115441</span>
+                  <span><b>International</b> : +1(903)781-1119</span>
+                  </div>
               </div>
             </div>
           </div>

@@ -8,17 +8,18 @@ const IrisSection = () => {
 
     return (
         <section className="dd-section-rr">
-            <h2 className="dd-heading-rr">Iris Aerial Innovations</h2>
-            <div className="dd-container-rr">
-                <div className="dd-text-rr">
-                    {content.split('\n\n').map((paragraph, index) => (
-                        <p key={index} className="dd-paragraph-rr">{paragraph}</p>
-                    ))}
+            <div className="dd-background-pattern"></div>
+            <div className="dd-content-wrapper">
+                <h2 className="dd-heading-rr">
+                    <span className="dd-heading-highlight">Iris Aerial Innovations</span>
+                </h2>
+                <div className="dd-container-rr">
+                    <div className="dd-text-rr">
+                        <p className="dd-paragraph-rr">{content}</p>
+                    </div>
                 </div>
             </div>
-            <div className="dd-drone-rr dd-drone1-rr"></div>
-            <div className="dd-drone-rr dd-drone2-rr"></div>
-            <div className="dd-drone-rr dd-drone3-rr"></div>
+            <div className="dd-tech-dots"></div>
         </section>
     );
 };

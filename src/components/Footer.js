@@ -15,8 +15,7 @@ const Footer = () => {
             <div className="logo-container">
               <img src={img1} alt="Iris Aerial Innovations Logo"/>
               <div className="logo-text">
-                <span className="iris-text">IRIS</span>
-                <span className="aerial-text">Aerial Innovations Pvt Ltd</span>
+                   <span className="iris-text">Iris Aerial Innovations Pvt Ltd</span>
               </div>
             </div>
           </div>
@@ -76,7 +75,10 @@ const Footer = () => {
             global@irisaerial.in
             </p>
           <br />
-            <p><FaPhone className="icon" />+91 9599115441</p>
+            <p><FaPhone className="icon" />
+            +91 9599115441<br/>
+            +1 (903) 781-1119
+            </p>
           </div>
 
           <div className="footer-column locations">

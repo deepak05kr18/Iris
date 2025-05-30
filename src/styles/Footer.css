@@ -68,8 +68,9 @@
 .logo-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items:center;
   margin-bottom: 5px;
+  transform: translate(-30px, -10px); /* Moves left and up */
 }
 
 .company img {
@@ -86,19 +87,12 @@
 }
 
 .iris-text {
-  font-size: 28px;
+  font-size: 15px;
   font-weight: 700;
   color: #47cdf5;
   line-height: 1;
-  text-transform: uppercase;
-}
-
-.aerial-text {
-  font-size: 14px;
-  font-weight: 600;
-  color: #ffffff;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  white-space: nowrap; /* This prevents text from wrapping */
+  text-transform: none; /* This ensures text isn't uppercase */
 }
 
 /* Contact & Locations */
@@ -205,10 +199,7 @@
   .iris-text {
     font-size: 24px;
   }
-
-  .aerial-text {
-    font-size: 12px;
-  }
+  
 }
 
 @media (max-width: 480px) {
@@ -217,13 +208,6 @@
     text-align: center;
     width: 100%;
     display: flex;
-  }
-
-  .logo-container {
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
   }
 
   .company img {
@@ -243,12 +227,21 @@
     text-align: center;
   }
 
-  .aerial-text {
-    font-size: 11px;
-    text-align: center;
-  }
-
   .footer {
     overflow-x: hidden;
+  }
+}
+@media (max-width: 768px) {
+  .logo-container {
+    transform: none; /* Reset transform on smaller screens */
+    align-items: center; /* Center-align for mobile */
+  }
+}
+
+/* Extra small devices (optional fine-tuning) */
+@media (max-width: 480px) {
+  .logo-container {
+    width: 100%; /* Ensure full width */
+    margin: 0 auto; /* Center container */
   }
 }

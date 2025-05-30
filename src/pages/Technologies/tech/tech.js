@@ -6,7 +6,7 @@ import img3 from "../../../components/Images/cards/Avsm.webp"
 import img4 from "../../../components/Images/cards/Sattelite.webp"
 import img5 from "../../../components/Images/cards/Hydrology.webp"
 import img6 from "../../../components/Images/cards/dgps.jpeg"
-import img7 from "../../../components/Images/cards/Elevation Model.jpg"
+
 
 const Tech = () => {
   const containers = [
@@ -46,13 +46,7 @@ const Tech = () => {
       imgSrc: img5,
       imgPosition: "left",
     },
-    {
-      heading: "Elevation Model",
-      content: "We specialize in high-resolution elevation modeling services such as DEM, DTM, DSM, and 3D Building Models. These models provide detailed insights into terrain, surface features, and built environments, making them essential for applications in urban planning, infrastructure development, environmental analysis, and smart city projects. Our solutions help clients make informed, data-driven decisions with accurate and scalable geospatial information.",
-      imgSrc: img7,
-      imgPosition: "right",
-    },
-  ];
+     ];
 
   return (
     <div className="tech-wrapper">
