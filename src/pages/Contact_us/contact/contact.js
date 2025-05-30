@@ -52,7 +52,6 @@ const Contact = () => {
                 <div className="contact-info-text">
                   <h2>Address</h2>
                   <span>B-142, Sector 8, Dwarka 110077, New Delhi, India</span>
-                  <span>New Delhi, INDIA</span>
                 </div>
               </div>
             </div>

@@ -59,7 +59,6 @@
 /* Logo & Company Name Styling */
 .company {
   display: flex;
-
   align-items: center;
   text-align: center;
   padding-top: 0;
@@ -68,9 +67,9 @@
 .logo-container {
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   margin-bottom: 5px;
-  transform: translate(-30px, -10px); /* Moves left and up */
+  transform: translate(-30px, -10px);
 }
 
 .company img {
@@ -91,26 +90,31 @@
   font-weight: 700;
   color: #47cdf5;
   line-height: 1;
-  white-space: nowrap; /* This prevents text from wrapping */
-  text-transform: none; /* This ensures text isn't uppercase */
+  white-space: nowrap;
+  text-transform: none;
 }
 
-/* Contact & Locations */
-.contact p, 
-.locations p {
+/* Contact Section */
+.contact-item {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  font-size: 15px;
-  color: #ffffff;
-  margin: 10px 0;
-  line-height: 1.5;
+  gap: 15px;
+  margin-bottom: 15px;
 }
 
-.icon {
+.contact-item .icon {
   font-size: 18px;
   color: #47cdf5;
-  margin-top: 2px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.contact-item .icon1{
+  margin-top: 11px;
+}
+
+.contact-text {
+  line-height: 1.5;
+  font-size: 15px;
 }
 
 /* Social Icons */
@@ -181,17 +185,14 @@
     align-items: center;
   }
 
-  .contact p, 
-  .locations p {
+  .contact-item {
     justify-content: center;
-    text-align: center;
   }
 
   .follow-us .social-icons {
     justify-content: center;
   }
 
-  /* Mobile logo adjustments */
   .company img {
     max-width: 80px;
   }
@@ -200,6 +201,10 @@
     font-size: 24px;
   }
   
+  .logo-container {
+    transform: none;
+    align-items: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -230,18 +235,9 @@
   .footer {
     overflow-x: hidden;
   }
-}
-@media (max-width: 768px) {
-  .logo-container {
-    transform: none; /* Reset transform on smaller screens */
-    align-items: center; /* Center-align for mobile */
-  }
-}
 
-/* Extra small devices (optional fine-tuning) */
-@media (max-width: 480px) {
   .logo-container {
-    width: 100%; /* Ensure full width */
-    margin: 0 auto; /* Center container */
+    width: 100%;
+    margin: 0 auto;
   }
 }

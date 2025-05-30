@@ -8,19 +8,17 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-
         {/* First Row */}
         <div className="footer-row">
           <div className="footer-column company">
             <div className="logo-container">
               <img src={img1} alt="Iris Aerial Innovations Logo"/>
               <div className="logo-text">
-                   <span className="iris-text">Iris Aerial Innovations Pvt Ltd</span>
+                <span className="iris-text">Iris Aerial Innovations Pvt Ltd</span>
               </div>
             </div>
           </div>
 
-          {/* Rest of your footer columns remain the same */}
           <div className="footer-column">
             <h2>Quick Links</h2>
             <ul>
@@ -62,7 +60,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Rest of your footer remains the same */}
         <br />
         <hr className="divider" />
         <br />
@@ -70,20 +67,30 @@ const Footer = () => {
         <div className="footer-row">
           <div className="footer-column contact">
             <h2>Contact Us</h2>
-            <p><FaEnvelope className="icon" /> 
-            info@irisaerial.in<br />
-            global@irisaerial.in
-            </p>
-          <br />
-            <p><FaPhone className="icon" />
-            +91 9599115441<br/>
-            +1 (903) 781-1119
-            </p>
+            <div className="contact-item">
+              <div className="icon1"><FaEnvelope className="icon" /></div>
+              <div className="contact-text">
+                info@irisaerial.in<br />
+                global@irisaerial.in
+              </div>
+            </div>
+            <div className="contact-item">
+              <div className="icon1"><FaPhone className="icon" /></div>
+              <div className="contact-text">
+                +91 9599115441<br />
+                +1 (903) 781-1119
+              </div>
+            </div>
           </div>
 
           <div className="footer-column locations">
             <h2>Locations</h2>
-            <p><FaMapMarkerAlt className="icon" /> B-142, Sector 8, Dwarka 110077, New Delhi, India</p>
+            <div className="contact-item">
+              <FaMapMarkerAlt className="icon" />
+              <div className="contact-text">
+                B-142, Sector 8, Dwarka 110077, New Delhi, India
+              </div>
+            </div>
           </div>
 
           <div className="footer-column follow-us">
@@ -100,7 +107,7 @@ const Footer = () => {
         <hr className="divider" />
 
         <div className="copyright">
-          <p>© 2025 Iris Arial Innovations. All rights reserved.</p>
+          <p>© 2025 Iris Aerial Innovations. All rights reserved.</p>
         </div>
       </div>
     </footer>
