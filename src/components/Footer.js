@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaYoutube, FaLinkedin, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import { FaYoutube, FaLinkedin, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt, FaCode } from "react-icons/fa";
 import "../styles/Footer.css"; 
 import img1 from '../components/Images/Logo/iris_logo.jpeg';
 
@@ -106,8 +106,21 @@ const Footer = () => {
         <br />
         <hr className="divider" />
 
-        <div className="copyright">
-          <p>© 2025 Iris Aerial Innovations. All rights reserved.</p>
+        <div className="copyright-container">
+          <div className="copyright-left">
+            © 2025 Iris Aerial Innovations. All rights reserved.
+          </div>
+          <div className="copyright-right">
+            <span>Developed and maintained by </span>
+            <a 
+              href="https://www.linkedin.com/in/deepak-kumar-257b83254/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="deecode"
+            >
+              <FaCode className="code-icon" /><strong>DeeCode</strong>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
