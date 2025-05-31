@@ -66,8 +66,8 @@ const Contact = () => {
                 </div>
                 <div className="contact-info-text">
                   <h2>E-mail</h2>
-                  <span><b>Domestic</b> : info@irisaerial.in</span>
-                  <span><b>International</b> : global@irisaerial.in</span>
+                  <span><b>Indian</b> : info@irisaerial.in</span>
+                  <span><b>Global</b> : global@irisaerial.in</span>
                 </div>
               </div>
             </div>
@@ -82,8 +82,8 @@ const Contact = () => {
                 </div>
                 <div className="contact-info-text">
                   <h2>Contact Number</h2>
-                  <span><b>Domestic</b> : +91 9599115441</span>
-                  <span><b>International</b> : +1(903)781-1119</span>
+                  <span><b>Indian</b> : +91 9599115441</span>
+                  <span><b>Global</b> : +1(903)781-1119</span>
                   </div>
               </div>
             </div>

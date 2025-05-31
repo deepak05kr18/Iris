@@ -4,7 +4,7 @@ import "./clients.css";
 import clientLogo1 from "../../../components/Images/Logo/Anand_Raj-removebg-preview.png";
 import clientLogo3 from "../../../components/Images/Logo/CEG logo[1].png";
 import clientLogo4 from "../../../components/Images/Logo/CR-removebg-preview.png";
-import clientLogo5 from "../../../components/Images/Logo/DMIA-removebg-preview.png";
+import clientLogo15 from "../../../components/Images/Logo/DMIA-removebg-preview.png";
 import clientLogo6 from "../../../components/Images/Logo/East_Rail-removebg-preview.png";
 import clientLogo7 from "../../../components/Images/Logo/50hertz_Logo.png";
 import clientLogo9 from "../../../components/Images/Logo/NR-removebg-preview.png";
@@ -13,7 +13,7 @@ import clientLogo11 from "../../../components/Images/Logo/Vedanta-removebg-previ
 import clientLogo12 from "../../../components/Images/Logo/ecomen.jpeg";
 import clientLogo13 from "../../../components/Images/Logo/WhatsApp Image 2025-02-12 at 16.38.35_f7475348.jpg";
 import clientLogo14 from "../../../components/Images/Logo/logo1.jpeg";
-import clientLogo15 from "../../../components/Images/Logo/logo2.jpeg";
+import clientLogo5 from "../../../components/Images/Logo/logo2.jpeg";
 import clientLogo16 from "../../../components/Images/Logo/logo3.jpeg";
 
 const ClientLogos = () => {

@@ -5,7 +5,7 @@ import img2 from "../../../components/Images/cards/Photogrammetry.webp"
 import img3 from "../../../components/Images/cards/Avsm.webp"
 import img4 from "../../../components/Images/cards/Sattelite.webp"
 import img5 from "../../../components/Images/cards/Hydrology.webp"
-import img6 from "../../../components/Images/cards/dgps.jpeg"
+import img6 from "../../../components/Images/cards/ndgps.jpeg"
 
 
 const Tech = () => {

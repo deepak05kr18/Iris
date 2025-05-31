@@ -1,19 +1,19 @@
 import React from "react";
-import "./layer1.css"; // Importing CSS for styling
-import img1 from "../../../components/Images/Background/together_converted.webp";
+import "./layer11.css"; // Updated CSS file name
+import img1 from "../../../components/Images/Background/aboutus.webp";
 
-const Layer1 = () => {
+const AboutLayer1 = () => {
   return (
     <section
-      className="layer_1"
+      className="about-hero"
       style={{ backgroundImage: `url(${img1})` }}
     >
-      <div className="layer_1-overlay"></div>
-      <div className="layer_1-content">
+      <div className="about-hero-overlay"></div>
+      <div className="about-hero-content">
         <h1>Together Towards Tomorrow</h1>
       </div>
     </section>
   );
 };
 
-export default Layer1;
+export default AboutLayer1;
